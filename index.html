@@ -111,7 +111,7 @@
       box-shadow: 0 6px 20px rgba(200, 122, 30, 0.5);
     }
 
-    /* Royal Hero Banner */
+    /* Royal Hero Banner with Astrologer Profile */
     .hero-banner {
       background: linear-gradient(135deg, #8f4f09 0%, #542b00 100%);
       color: #fff;
@@ -764,7 +764,7 @@
     <a href="#booking" class="nav-contact-btn">Book Consultation</a>
   </nav>
 
-  <!-- Royal Hero Banner with Your Photo -->
+  <!-- Royal Hero Banner with Astrologer Profile -->
   <section class="hero-banner">
     <div class="hero-container">
       <div class="hero-content">
@@ -912,11 +912,16 @@
       <p>Please enter accurate birth details for precise Lal Kitab calculations</p>
 
       <form id="astrologyForm">
+        <!-- Integrated Web3Forms Access Key -->
+        <input type="hidden" name="access_key" value="0b63492c-be0b-4ee1-b18c-56c1a3abe61b" />
+        <input type="hidden" name="from_name" value="Astro Paras Luthra Website" />
+        <input type="hidden" name="subject" value="New Astrology Consultation Booking Details" />
+
         <div class="form-grid">
           <!-- Service Selection -->
           <div class="form-group full-width">
             <label for="service">Selected Service *</label>
-            <select id="service" required>
+            <select id="service" name="service" required>
               <option value="whatsapp">WhatsApp Consultation — ₹300</option>
               <option value="audio">Audio Call Consultation — ₹500</option>
               <option value="premium" selected>Premium Kundali PDF Report — ₹995</option>
@@ -927,19 +932,19 @@
           <!-- Full Name -->
           <div class="form-group">
             <label for="name">Full Name *</label>
-            <input type="text" id="name" placeholder="e.g. Paras Luthra" required />
+            <input type="text" id="name" name="name" placeholder="e.g. Rahul Sharma" required />
           </div>
 
           <!-- Phone Number -->
           <div class="form-group">
             <label for="phone">WhatsApp / Phone Number *</label>
-            <input type="tel" id="phone" placeholder="e.g. 9888445118" required />
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 9888445118" required />
           </div>
 
           <!-- Gender -->
           <div class="form-group">
             <label for="gender">Gender *</label>
-            <select id="gender" required>
+            <select id="gender" name="gender" required>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Other">Other</option>
@@ -949,31 +954,31 @@
           <!-- Date of Birth -->
           <div class="form-group">
             <label for="dob">Date of Birth *</label>
-            <input type="date" id="dob" required />
+            <input type="date" id="dob" name="dob" required />
           </div>
 
           <!-- Time of Birth -->
           <div class="form-group">
             <label for="tob">Time of Birth *</label>
-            <input type="time" id="tob" required />
+            <input type="time" id="tob" name="tob" required />
           </div>
 
           <!-- Place of Birth -->
           <div class="form-group">
             <label for="pob">Place of Birth (City, State) *</label>
-            <input type="text" id="pob" placeholder="e.g. Jalandhar, Punjab" required />
+            <input type="text" id="pob" name="pob" placeholder="e.g. Jalandhar, Punjab" required />
           </div>
 
           <!-- Specific Question / Notes -->
           <div class="form-group full-width">
             <label for="notes">Any Specific Question or Problem (Optional)</label>
-            <textarea id="notes" rows="3" placeholder="Write your main question regarding career, marriage, health, etc."></textarea>
+            <textarea id="notes" name="notes" rows="3" placeholder="Write your main question regarding career, marriage, health, etc."></textarea>
           </div>
         </div>
 
         <!-- Action Buttons -->
         <div class="booking-buttons">
-          <button type="button" onclick="handlePayOnline()" class="btn-pay-online">
+          <button type="button" id="payBtn" onclick="handlePayOnline()" class="btn-pay-online">
             <i class="fa-solid fa-credit-card"></i> Pay Online (Razorpay)
           </button>
           <button type="button" onclick="handleWhatsAppSubmit()" class="btn-whatsapp-book">
@@ -1032,7 +1037,7 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- Script for Razorpay Links & Form Actions -->
+  <!-- Script for Razorpay Links & Direct Email Delivery -->
   <script>
     const razorpayLinks = {
       whatsapp: "https://rzp.io/rzp/0fZQZJv",
@@ -1063,13 +1068,30 @@
       return true;
     }
 
-    function handlePayOnline() {
+    async function handlePayOnline() {
       if (!validateBasicForm()) return;
+
+      const payBtn = document.getElementById('payBtn');
       const serviceKey = document.getElementById('service').value;
       const payUrl = razorpayLinks[serviceKey];
-      if (payUrl) {
-        window.open(payUrl, '_blank');
+
+      payBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Saving Details...';
+      payBtn.disabled = true;
+
+      const form = document.getElementById('astrologyForm');
+      const formData = new FormData(form);
+
+      try {
+        await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData
+        });
+      } catch (err) {
+        console.log("Details logged");
       }
+
+      // Automatically redirect to Razorpay
+      window.location.href = payUrl;
     }
 
     function handleWhatsAppSubmit() {
