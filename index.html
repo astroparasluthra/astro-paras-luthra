@@ -17,7 +17,7 @@
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
@@ -26,8 +26,8 @@
       --bg-cream: #fffaf0;
       --card-bg: #ffffff;
       --saffron-gold: #c87a1e;
-      --saffron-dark: #a15d0d;
-      --saffron-gradient: linear-gradient(135deg, #d9822b 0%, #b86510 100%);
+      --saffron-dark: #8f4f09;
+      --saffron-gradient: linear-gradient(135deg, #d9822b 0%, #a15d0d 100%);
       --text-dark: #221c17;
       --text-muted: #6e6459;
       --border-warm: #f0deca;
@@ -111,13 +111,30 @@
       box-shadow: 0 6px 20px rgba(200, 122, 30, 0.5);
     }
 
-    /* Royal Hero Banner */
+    /* Hero Banner with Astrologer Profile */
     .hero-banner {
-      background: linear-gradient(135deg, #a15d0d 0%, #703c02 100%);
+      background: linear-gradient(135deg, #8f4f09 0%, #542b00 100%);
       color: #fff;
-      padding: 4rem 1.5rem 6.5rem;
-      text-align: center;
-      position: relative;
+      padding: 4rem 2rem 6.5rem;
+    }
+
+    .hero-container {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-image-wrap {
+        order: -1;
+      }
     }
 
     .hero-badge {
@@ -132,25 +149,108 @@
       letter-spacing: 0.5px;
     }
 
-    .hero-banner h1 {
+    .hero-content h1 {
       font-family: 'Cinzel', serif;
-      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
       font-weight: 800;
       margin-bottom: 1rem;
       line-height: 1.2;
     }
 
-    .hero-banner p {
-      max-width: 750px;
-      margin: 0 auto 2rem;
+    .hero-content p {
       font-size: 1.1rem;
       color: #f7e6d2;
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero-actions {
+        justify-content: center;
+      }
+    }
+
+    .btn-gold {
+      background: #f7b731;
+      background: linear-gradient(135deg, #ffd778 0%, #e09419 100%);
+      color: #2b1800;
+      font-weight: 800;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      transition: all 0.3s;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(245, 179, 66, 0.5);
+    }
+
+    .btn-outline-hero {
+      background: rgba(255,255,255,0.1);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      color: #fff;
+      font-weight: 700;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .btn-outline-hero:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Profile Image Card */
+    .hero-image-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-card {
+      position: relative;
+      width: 290px;
+      height: 350px;
+      border-radius: 24px;
+      padding: 8px;
+      background: linear-gradient(145deg, #ffd778, #8f4f09);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+
+    .profile-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .profile-tag {
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #17120d;
+      color: #ffd778;
+      border: 1px solid var(--border-gold);
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 800;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
 
     /* Quick Action Icon Tiles */
     .quick-tiles-wrapper {
       max-width: 1100px;
-      margin: -4rem auto 3rem;
+      margin: -3.5rem auto 3rem;
       padding: 0 1.5rem;
       position: relative;
       z-index: 10;
@@ -202,6 +302,35 @@
       font-size: 0.85rem;
       font-weight: 700;
       color: var(--text-dark);
+    }
+
+    /* Stats Banner */
+    .stats-container {
+      background: #ffffff;
+      border: 1px solid var(--border-warm);
+      border-radius: 20px;
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-item h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--saffron-dark);
+    }
+
+    .stat-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
     }
 
     /* Section Headings */
@@ -339,43 +468,43 @@
       box-shadow: 0 6px 20px rgba(200, 122, 30, 0.4);
     }
 
-    /* Stats Banner */
-    .stats-container {
-      background: #ffffff;
-      border: 1px solid var(--border-warm);
-      border-radius: 20px;
-      max-width: 1100px;
-      margin: 4rem auto;
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .stat-item h3 {
-      font-family: 'Cinzel', serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--saffron-dark);
-    }
-
-    .stat-item p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
     /* About Section */
     .about-sec {
       max-width: 1050px;
       margin: 4rem auto;
-      padding: 2.5rem;
+      padding: 3rem 2.5rem;
       background: var(--bg-cream);
       border: 1.5px solid var(--border-warm);
       border-radius: 24px;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 800px) {
+      .about-sec {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .about-thumb {
+        margin: 0 auto;
+      }
+    }
+
+    .about-thumb {
+      width: 220px;
+      height: 270px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid var(--border-gold);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .about-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .about-sec h3 {
@@ -501,13 +630,27 @@
     <a href="#services" class="nav-contact-btn">Book Consultation</a>
   </nav>
 
-  <!-- Hero Banner -->
+  <!-- Royal Hero Banner with Your Photo -->
   <section class="hero-banner">
-    <div class="hero-badge">
-      <i class="fa-solid fa-crown"></i> Authentic Lal Kitab & Vedic Guidance
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-crown"></i> Authentic Lal Kitab & Vedic Astrologer
+        </div>
+        <h1>Astro Paras Luthra</h1>
+        <p>Get precise, logical astrological guidance and practical Lal Kitab remedies for Career, Marriage, Wealth, and Health backed by 10+ years of expertise.</p>
+        <div class="hero-actions">
+          <a href="#services" class="btn-gold"><i class="fa-solid fa-calendar-check"></i> Consult Now</a>
+          <a href="#about" class="btn-outline-hero">About Astrologer</a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="profile-card">
+          <img src="paras-luthra.jpg" alt="Astro Paras Luthra">
+          <div class="profile-tag">⭐ Lal Kitab Specialist</div>
+        </div>
+      </div>
     </div>
-    <h1>Accurate Astrology Solutions</h1>
-    <p>Get profound clarity on Career, Marriage, Finances & Health with simple, time-tested Lal Kitab remedies backed by 10+ years of expertise.</p>
   </section>
 
   <!-- Quick Action Icon Tiles (Astro Arun Pandit Style) -->
@@ -531,7 +674,7 @@
       </a>
       <a href="#about" class="tile-card">
         <div class="tile-icon-circle"><i class="fa-solid fa-user-tie"></i></div>
-        <span>About Astrologer</span>
+        <span>About Me</span>
       </a>
     </div>
   </div>
@@ -630,9 +773,14 @@
 
   <!-- About Section -->
   <section id="about" class="about-sec">
-    <h3>About Astro Paras Luthra</h3>
-    <p>With over <strong>10+ years of dedicated practice</strong> in Lal Kitab and Vedic astrology, Astro Paras Luthra has analyzed more than <strong>11,000+ horoscopes</strong>. The core methodology emphasizes logical, result-oriented, and simple home-based Lal Kitab remedies without fear-mongering or complicated rituals.</p>
-    <p>Every consultation is conducted with 100% confidentiality, guiding you towards peace, prosperity, and clarity in all life aspects.</p>
+    <div class="about-thumb">
+      <img src="paras-luthra.jpg" alt="Paras Luthra Profile">
+    </div>
+    <div>
+      <h3>About Astro Paras Luthra</h3>
+      <p>With over <strong>10+ years of dedicated practice</strong> in Lal Kitab and Vedic astrology, Astro Paras Luthra has analyzed more than <strong>11,000+ horoscopes</strong>. The core methodology emphasizes logical, result-oriented, and simple home-based Lal Kitab remedies without fear-mongering or complicated rituals.</p>
+      <p>Every consultation is conducted with 100% confidentiality, guiding you towards peace, prosperity, and clarity in all life aspects.</p>
+    </div>
   </section>
 
   <!-- Footer -->
