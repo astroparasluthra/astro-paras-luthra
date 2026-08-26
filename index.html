@@ -1,762 +1,675 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GDH88NCN4T"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GDH88NCN4T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GDH88NCN4T');
+  </script>
 
-  gtag('config', 'G-GDH88NCN4T');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Astro Paras Luthra | Lal Kitab Astrology Services</title>
-  
+  <title>Astro Paras Luthra | Authentic Lal Kitab & Vedic Astrology</title>
+
   <!-- Google Fonts & Font Awesome Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
     :root {
-      --bg-dark: #07080d;
-      --card-bg: #11131f;
-      --card-highlight: #17192b;
-      --primary: #d4af37;
-      --primary-light: #fbe698;
-      --text-main: #f3f3f8;
-      --text-muted: #9da0b5;
-      --border-glow: rgba(212, 175, 55, 0.25);
+      --bg-warm: #fcf8f2;
+      --bg-cream: #fffaf0;
+      --card-bg: #ffffff;
+      --saffron-gold: #c87a1e;
+      --saffron-dark: #a15d0d;
+      --saffron-gradient: linear-gradient(135deg, #d9822b 0%, #b86510 100%);
+      --text-dark: #221c17;
+      --text-muted: #6e6459;
+      --border-warm: #f0deca;
+      --border-gold: #e2b475;
+      --shadow-sm: 0 4px 20px rgba(184, 101, 16, 0.08);
+      --shadow-hover: 0 12px 30px rgba(184, 101, 16, 0.16);
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       scroll-behavior: smooth;
     }
 
     body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
+      background-color: var(--bg-warm);
+      color: var(--text-dark);
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
-    h1, h2, h3, .nav-logo {
-      font-family: 'Cinzel', serif;
-      letter-spacing: 1px;
-    }
-
-    /* Navigation */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(7, 8, 13, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-glow);
+    /* Top Contact Bar */
+    .top-bar {
+      background: #1d1712;
+      color: #e5d8cc;
+      padding: 0.5rem 2rem;
+      font-size: 0.85rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 8%;
-      z-index: 1000;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .nav-logo {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--primary);
+    .top-bar a {
+      color: #f3c285;
+      text-decoration: none;
+      margin-left: 8px;
+      font-weight: 600;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+      padding: 0.9rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      font-size: 1.45rem;
+      color: var(--saffron-dark);
       text-decoration: none;
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 1.8rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--text-main);
-      text-decoration: none;
-      font-weight: 400;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .nav-contact-badge {
-      display: flex;
-      gap: 0.8rem;
-      align-items: center;
-    }
-
-    .nav-phone {
-      color: var(--text-muted);
+    .nav-contact-btn {
+      background: var(--saffron-gradient);
+      color: #fff;
+      font-weight: 700;
       font-size: 0.9rem;
+      padding: 0.65rem 1.6rem;
+      border-radius: 50px;
       text-decoration: none;
+      box-shadow: 0 4px 15px rgba(200, 122, 30, 0.35);
+      transition: all 0.3s ease;
     }
 
-    .nav-phone:hover {
-      color: var(--primary);
-    }
-
-    .btn-nav {
-      background: linear-gradient(135deg, var(--primary), #9e7f1e);
-      color: #000;
-      padding: 0.5rem 1.2rem;
-      border-radius: 20px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .btn-nav:hover {
+    .nav-contact-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+      box-shadow: 0 6px 20px rgba(200, 122, 30, 0.5);
     }
 
-    /* Hero Section */
-    .hero {
-      min-height: 85vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 7rem 2rem 4rem;
-      background: radial-gradient(circle at center, #1a1d30 0%, var(--bg-dark) 75%);
-    }
-
-    .hero-content {
-      max-width: 850px;
-    }
-
-    .hero-tag {
-      color: var(--primary);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.8rem;
-    }
-
-    .hero h1 {
-      font-size: 2.9rem;
+    /* Royal Hero Banner */
+    .hero-banner {
+      background: linear-gradient(135deg, #a15d0d 0%, #703c02 100%);
       color: #fff;
-      margin-bottom: 1.2rem;
-      line-height: 1.25;
-    }
-
-    .hero h1 span {
-      background: linear-gradient(to right, var(--primary-light), var(--primary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      color: var(--text-muted);
-      font-size: 1.15rem;
-      margin-bottom: 2rem;
-    }
-
-    .contact-bar {
-      display: inline-flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      background: rgba(255, 255, 255, 0.04);
-      padding: 0.8rem 1.6rem;
-      border-radius: 30px;
-      border: 1px solid var(--border-glow);
-      margin-bottom: 2rem;
-    }
-
-    .contact-bar a {
-      color: var(--text-main);
-      text-decoration: none;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .contact-bar a i {
-      color: var(--primary);
-    }
-
-    /* Pricing & Packages Section */
-    section {
-      padding: 5rem 8%;
-    }
-
-    .section-title {
+      padding: 4rem 1.5rem 6.5rem;
       text-align: center;
-      margin-bottom: 3.5rem;
-    }
-
-    .section-title h2 {
-      font-size: 2.2rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .section-title p {
-      color: var(--text-muted);
-    }
-
-    .packages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      align-items: stretch;
-    }
-
-    .package-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-glow);
-      border-radius: 14px;
-      padding: 2.2rem 1.8rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       position: relative;
-      transition: transform 0.3s, border-color 0.3s;
     }
 
-    .package-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--primary);
-    }
-
-    .package-card.featured {
-      background: var(--card-highlight);
-      border: 2px solid var(--primary);
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
-    }
-
-    .badge {
-      position: absolute;
-      top: -12px;
-      right: 20px;
-      background: var(--primary);
-      color: #000;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .package-header {
-      margin-bottom: 1.5rem;
-    }
-
-    .package-header i {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 0.8rem;
-    }
-
-    .package-header h3 {
-      font-size: 1.35rem;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .package-price {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--primary-light);
-      margin-bottom: 1rem;
-    }
-
-    .package-desc {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .package-features {
-      list-style: none;
-      margin-bottom: 2rem;
-      text-align: left;
-    }
-
-    .package-features li {
-      margin-bottom: 0.55rem;
-      font-size: 0.9rem;
-      color: #d1d3e2;
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-    }
-
-    .package-features li i {
-      color: var(--primary);
-      margin-top: 4px;
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.4rem 1.4rem;
+      border-radius: 50px;
       font-size: 0.85rem;
-    }
-
-    .btn-select-plan {
-      background: linear-gradient(135deg, var(--primary), #a3821c);
-      color: #000;
-      padding: 0.8rem;
-      border-radius: 8px;
       font-weight: 700;
-      text-align: center;
-      text-decoration: none;
-      display: block;
-      transition: opacity 0.3s;
-    }
-
-    .btn-select-plan:hover {
-      opacity: 0.9;
-    }
-
-    /* Booking Form Section */
-    .booking-section {
-      background: #0c0e18;
-    }
-
-    .booking-container {
-      max-width: 700px;
-      margin: 0 auto;
-      background: var(--card-bg);
-      border: 1px solid var(--border-glow);
-      padding: 2.5rem;
-      border-radius: 14px;
-    }
-
-    .form-group {
       margin-bottom: 1.2rem;
+      letter-spacing: 0.5px;
     }
 
-    .form-group label {
-      display: block;
-      margin-bottom: 0.4rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
+    .hero-banner h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
     }
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.85rem;
-      background: #07080d;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 6px;
-      color: #fff;
-      font-size: 0.95rem;
+    .hero-banner p {
+      max-width: 750px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      color: #f7e6d2;
     }
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary);
+    /* Quick Action Icon Tiles */
+    .quick-tiles-wrapper {
+      max-width: 1100px;
+      margin: -4rem auto 3rem;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 10;
     }
 
-    .form-row {
-      display: flex;
+    .quick-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
       gap: 1rem;
     }
 
-    .form-row .form-group {
-      flex: 1;
-    }
-
-    .payment-options {
+    .tile-card {
+      background: #ffffff;
+      border: 1px solid var(--border-warm);
+      border-radius: 16px;
+      padding: 1.4rem 0.8rem;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text-dark);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
-      margin-top: 1.5rem;
-    }
-
-    .btn-pay-rzp {
-      width: 100%;
-      background: #0c2340;
-      color: #528ff0;
-      border: 1px solid #528ff0;
-      padding: 0.95rem;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      transition: 0.3s;
     }
 
-    .btn-pay-rzp:hover {
-      background: #528ff0;
-      color: #fff;
+    .tile-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--saffron-gold);
+      box-shadow: var(--shadow-hover);
     }
 
-    .btn-whatsapp {
-      width: 100%;
-      background: linear-gradient(135deg, var(--primary), #9e7f1e);
-      color: #000;
-      padding: 0.95rem;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: opacity 0.3s;
-    }
-
-    .btn-whatsapp:hover {
-      opacity: 0.9;
-    }
-
-    /* Floating WhatsApp */
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background: #25d366;
-      color: #fff;
-      width: 58px;
-      height: 58px;
+    .tile-icon-circle {
+      width: 54px;
+      height: 54px;
+      border: 1.5px solid var(--border-gold);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
-      z-index: 999;
-      text-decoration: none;
-      transition: transform 0.3s;
+      color: var(--saffron-dark);
+      font-size: 1.4rem;
+      background: var(--bg-cream);
     }
 
-    .whatsapp-btn:hover {
-      transform: scale(1.1);
+    .tile-card span {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    /* Section Headings */
+    .section-header {
+      text-align: center;
+      margin: 3.5rem 1rem 2rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .section-header h2 span {
+      color: var(--saffron-dark);
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 0.4rem;
+    }
+
+    /* Service Bento / Cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.8rem;
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .service-box {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border-warm);
+      border-radius: 20px;
+      padding: 2rem 1.6rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.35s ease;
+    }
+
+    .service-box:hover {
+      transform: translateY(-6px);
+      border-color: var(--saffron-gold);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .service-box.featured {
+      border: 2px solid var(--saffron-gold);
+      background: var(--bg-cream);
+    }
+
+    .badge-top {
+      position: absolute;
+      top: -12px;
+      right: 20px;
+      background: var(--saffron-dark);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.25rem 0.8rem;
+      border-radius: 50px;
+      text-transform: uppercase;
+    }
+
+    .service-icon-wrap {
+      width: 65px;
+      height: 65px;
+      border: 1.5px solid var(--border-gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      color: var(--saffron-dark);
+      background: #fff;
+      margin-bottom: 1.2rem;
+    }
+
+    .service-box h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .price-tag {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--saffron-dark);
+      margin-bottom: 1.2rem;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 1.8rem;
+    }
+
+    .features-list li {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .features-list li i {
+      color: var(--saffron-gold);
+      font-size: 0.85rem;
+    }
+
+    .btn-action {
+      background: var(--saffron-gradient);
+      color: #fff;
+      text-align: center;
+      padding: 0.85rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      display: block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(200, 122, 30, 0.25);
+    }
+
+    .btn-action:hover {
+      opacity: 0.92;
+      box-shadow: 0 6px 20px rgba(200, 122, 30, 0.4);
+    }
+
+    /* Stats Banner */
+    .stats-container {
+      background: #ffffff;
+      border: 1px solid var(--border-warm);
+      border-radius: 20px;
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-item h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--saffron-dark);
+    }
+
+    .stat-item p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* About Section */
+    .about-sec {
+      max-width: 1050px;
+      margin: 4rem auto;
+      padding: 2.5rem;
+      background: var(--bg-cream);
+      border: 1.5px solid var(--border-warm);
+      border-radius: 24px;
+    }
+
+    .about-sec h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      color: var(--saffron-dark);
+      margin-bottom: 1rem;
+    }
+
+    .about-sec p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
     }
 
     /* Footer */
     footer {
-      border-top: 1px solid var(--border-glow);
-      text-align: center;
-      padding: 2.5rem 1rem;
-      color: var(--text-muted);
-      font-size: 0.9rem;
+      background: #17120d;
+      color: #cfc2b4;
+      padding: 4rem 1.5rem 2rem;
+      margin-top: 5rem;
     }
 
-    .footer-phones a {
-      color: var(--primary);
+    .footer-grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-col h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-col p, .footer-col a {
+      color: #b5a494;
       text-decoration: none;
-      margin: 0 8px;
+      font-size: 0.92rem;
+      margin-bottom: 0.6rem;
+      display: block;
     }
 
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .form-row { flex-direction: column; gap: 0; }
-      .hero h1 { font-size: 2.1rem; }
+    .footer-col a:hover {
+      color: var(--saffron-gold);
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .footer-socials a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      padding-top: 1.5rem;
+      font-size: 0.85rem;
+      color: #8c7b6c;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 58px;
+      height: 58px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 2rem;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+      z-index: 1000;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#" class="nav-logo">
-      <i class="fa-solid fa-om"></i> Astro Paras Luthra
-    </a>
-    <ul class="nav-links">
-      <li><a href="#services">Consultations</a></li>
-      <li><a href="#book">Book Online</a></li>
-    </ul>
-    <div class="nav-contact-badge">
-      <a href="tel:9888445118" class="nav-phone"><i class="fa-solid fa-phone"></i> 9888445118</a>
-      <a href="#book" class="btn-nav">Book Now</a>
+  <!-- Top Contact Bar -->
+  <div class="top-bar">
+    <div>
+      <i class="fa-solid fa-phone"></i> <a href="tel:+917986665118">+91 79866 65118</a> / <a href="tel:+919888445118">+91 98884 45118</a> &nbsp;|&nbsp; 
+      <i class="fa-solid fa-envelope"></i> <a href="mailto:destinyvaniya@gmail.com">destinyvaniya@gmail.com</a>
     </div>
+    <div>
+      <span>10+ Years Experience</span>
+      <a href="#services"><i class="fa-solid fa-calendar-check"></i> Instant Booking</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="brand-logo">
+      <i class="fa-solid fa-dharmachakra"></i> Astro Paras Luthra
+    </a>
+    <a href="#services" class="nav-contact-btn">Book Consultation</a>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
-      <div class="hero-tag">Vedic & Lal Kitab Astrology Services</div>
-      <h1>Clarity, Guidance & <span>Lal Kitab Solutions</span></h1>
-      <p>Consult Astro Paras Luthra for accurate birth chart evaluations, gemstone guidance, customized Lal Kitab remedies, and yearly Varshphal predictions.</p>
-      
-      <div class="contact-bar">
-        <a href="tel:9888445118"><i class="fa-solid fa-phone"></i> +91 98884 45118</a>
-        <a href="tel:7986665118"><i class="fa-solid fa-phone"></i> +91 79866 65118</a>
-      </div>
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <div class="hero-badge">
+      <i class="fa-solid fa-crown"></i> Authentic Lal Kitab & Vedic Guidance
     </div>
-  </header>
+    <h1>Accurate Astrology Solutions</h1>
+    <p>Get profound clarity on Career, Marriage, Finances & Health with simple, time-tested Lal Kitab remedies backed by 10+ years of expertise.</p>
+  </section>
 
-  <!-- Services & Pricing Section -->
+  <!-- Quick Action Icon Tiles (Astro Arun Pandit Style) -->
+  <div class="quick-tiles-wrapper">
+    <div class="quick-tiles">
+      <a href="#services" class="tile-card">
+        <div class="tile-icon-circle"><i class="fa-solid fa-book-open"></i></div>
+        <span>Explore Report</span>
+      </a>
+      <a href="#services" class="tile-card">
+        <div class="tile-icon-circle"><i class="fa-solid fa-phone-volume"></i></div>
+        <span>Consult Now</span>
+      </a>
+      <a href="#services" class="tile-card">
+        <div class="tile-icon-circle"><i class="fa-solid fa-gem"></i></div>
+        <span>Gemstones</span>
+      </a>
+      <a href="https://wa.me/919888445118" target="_blank" class="tile-card">
+        <div class="tile-icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
+        <span>Ask on WhatsApp</span>
+      </a>
+      <a href="#about" class="tile-card">
+        <div class="tile-icon-circle"><i class="fa-solid fa-user-tie"></i></div>
+        <span>About Astrologer</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Stats Banner -->
+  <div class="stats-container">
+    <div class="stat-item">
+      <h3>11,000+</h3>
+      <p>Kundalis Analyzed</p>
+    </div>
+    <div class="stat-item">
+      <h3>10+ Years</h3>
+      <p>Experience</p>
+    </div>
+    <div class="stat-item">
+      <h3>4.9 ★</h3>
+      <p>Client Rating</p>
+    </div>
+    <div class="stat-item">
+      <h3>100%</h3>
+      <p>Confidential</p>
+    </div>
+  </div>
+
+  <!-- Services Section -->
   <section id="services">
-    <div class="section-title">
-      <h2>Consultation Plans</h2>
-      <p>Choose your plan and book with instant online payment or WhatsApp</p>
+    <div class="section-header">
+      <h2>Our <span>Services</span></h2>
+      <p>Choose the consultation that fits your needs and start your journey toward clarity</p>
     </div>
 
-    <div class="packages-grid">
-
-      <!-- Plan 1 -->
-      <div class="package-card">
+    <div class="services-grid">
+      <!-- WhatsApp Consultation -->
+      <div class="service-box">
         <div>
-          <div class="package-header">
-            <i class="fa-brands fa-whatsapp"></i>
-            <h3>WhatsApp Consultation</h3>
-            <div class="package-price">₹300</div>
-          </div>
-          <p class="package-desc">Quick, direct analysis for specific pressing questions and practical remedies.</p>
-          <ul class="package-features">
-            <li><i class="fa-solid fa-circle-check"></i> Analysis on your specific questions</li>
-            <li><i class="fa-solid fa-circle-check"></i> Lal Kitab specific remedies</li>
-            <li><i class="fa-solid fa-circle-check"></i> Delivered directly via WhatsApp</li>
+          <div class="service-icon-wrap"><i class="fa-brands fa-whatsapp"></i></div>
+          <h3>WhatsApp Consultation</h3>
+          <div class="price-tag">₹300</div>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check"></i> 1-2 Specific Questions</li>
+            <li><i class="fa-solid fa-check"></i> Practical Lal Kitab Upay</li>
+            <li><i class="fa-solid fa-check"></i> Quick Audio/Text Reply</li>
           </ul>
         </div>
-        <a href="#book" class="btn-select-plan" onclick="selectService('whatsapp')">Select & Book (₹300)</a>
+        <a href="https://rzp.io/rzp/0fZQZJv" class="btn-action">Book on WhatsApp</a>
       </div>
 
-      <!-- Plan 2 -->
-      <div class="package-card">
+      <!-- Audio Consultation -->
+      <div class="service-box">
         <div>
-          <div class="package-header">
-            <i class="fa-solid fa-phone-volume"></i>
-            <h3>Audio Consultation</h3>
-            <div class="package-price">₹500</div>
-          </div>
-          <p class="package-desc">Interactive direct voice call discussion along with a written analysis report.</p>
-          <ul class="package-features">
-            <li><i class="fa-solid fa-circle-check"></i> Comprehensive Kundali Analysis</li>
-            <li><i class="fa-solid fa-circle-check"></i> Live Q&A via Audio Call</li>
-            <li><i class="fa-solid fa-circle-check"></i> Summary PDF Report included</li>
-            <li><i class="fa-solid fa-circle-check"></i> Customized remedial guidance</li>
+          <div class="service-icon-wrap"><i class="fa-solid fa-phone-volume"></i></div>
+          <h3>Audio Consultation</h3>
+          <div class="price-tag">₹500</div>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check"></i> 15-20 Min Voice Call</li>
+            <li><i class="fa-solid fa-check"></i> In-depth Chart Discussion</li>
+            <li><i class="fa-solid fa-check"></i> Easy Step-by-Step Upay</li>
           </ul>
         </div>
-        <a href="#book" class="btn-select-plan" onclick="selectService('audio')">Select & Book (₹500)</a>
+        <a href="https://rzp.io/rzp/dqTpV3R" class="btn-action">Book Voice Call</a>
       </div>
 
-      <!-- Plan 3 (Featured) -->
-      <div class="package-card featured">
-        <div class="badge">Most Popular</div>
+      <!-- Premium Kundali PDF -->
+      <div class="service-box featured">
+        <div class="badge-top">Most Detailed</div>
         <div>
-          <div class="package-header">
-            <i class="fa-solid fa-file-pdf"></i>
-            <h3>Premium Kundali (PDF)</h3>
-            <div class="package-price">₹995</div>
-          </div>
-          <p class="package-desc">Complete, exhaustive 360° life and chart breakdown with 3-year Varshphal.</p>
-          <ul class="package-features">
-            <li><i class="fa-solid fa-circle-check"></i> Complete Birth Chart Analysis & सभी 12 भावों का फल</li>
-            <li><i class="fa-solid fa-circle-check"></i> Career, Job, Business & धन स्थिति</li>
-            <li><i class="fa-solid fa-circle-check"></i> Marriage, Relationship & Family</li>
-            <li><i class="fa-solid fa-circle-check"></i> Health indications & Property/Vehicle</li>
-            <li><i class="fa-solid fa-circle-check"></i> Important Yog / Dosha Analysis</li>
-            <li><i class="fa-solid fa-circle-check"></i> अगले 3 वर्षों का Varshphal (Turning Points)</li>
-            <li><i class="fa-solid fa-circle-check"></i> Lal Kitab विशेष Remedies</li>
-            <li><i class="fa-solid fa-circle-check"></i> Full Detailed PDF Document</li>
+          <div class="service-icon-wrap"><i class="fa-solid fa-scroll"></i></div>
+          <h3>Premium Kundali PDF</h3>
+          <div class="price-tag">₹995</div>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check"></i> Complete Life Predictions Report</li>
+            <li><i class="fa-solid fa-check"></i> Career, Wealth & Marriage Timing</li>
+            <li><i class="fa-solid fa-check"></i> Detailed Lal Kitab Varshphal</li>
+            <li><i class="fa-solid fa-check"></i> Lifetime Custom Remedies</li>
           </ul>
         </div>
-        <a href="#book" class="btn-select-plan" onclick="selectService('premium')">Select & Book (₹995)</a>
+        <a href="https://rzp.io/rzp/OWiOPGrV" class="btn-action">Get Full Report</a>
       </div>
 
-      <!-- Plan 4 -->
-      <div class="package-card">
+      <!-- Gemstone Consultation -->
+      <div class="service-box">
         <div>
-          <div class="package-header">
-            <i class="fa-solid fa-gem"></i>
-            <h3>Gemstone Consultation</h3>
-            <div class="package-price">₹500</div>
-          </div>
-          <p class="package-desc">Targeted planetary enhancement with authentic gemstone and Varshphal analysis.</p>
-          <ul class="package-features">
-            <li><i class="fa-solid fa-circle-check"></i> Kundali Analysis for Gemstone Suitability</li>
-            <li><i class="fa-solid fa-circle-check"></i> Personalized Gemstone Recommendation</li>
-            <li><i class="fa-solid fa-circle-check"></i> Wearing rules, metal & day instructions</li>
-            <li><i class="fa-solid fa-circle-check"></i> Includes 2 Years Varshphal Report</li>
+          <div class="service-icon-wrap"><i class="fa-solid fa-gem"></i></div>
+          <h3>Gemstone Guidance</h3>
+          <div class="price-tag">₹500</div>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check"></i> Suitable Lucky Gemstone</li>
+            <li><i class="fa-solid fa-check"></i> Metal, Finger & Muhurat Details</li>
+            <li><i class="fa-solid fa-check"></i> Energization Rules</li>
           </ul>
         </div>
-        <a href="#book" class="btn-select-plan" onclick="selectService('gemstone')">Select & Book (₹500)</a>
+        <a href="https://rzp.io/rzp/3yXmKfA" class="btn-action">Consult Gemstone</a>
       </div>
-
     </div>
   </section>
 
-  <!-- Booking Form Section -->
-  <section id="book" class="booking-section">
-    <div class="section-title">
-      <h2>Online Booking & Consultation</h2>
-      <p>Fill out your details, then choose to pay via Razorpay or book over WhatsApp</p>
-    </div>
-
-    <div class="booking-container">
-      <form id="consultationForm">
-        <div class="form-group">
-          <label for="service">Selected Consultation Plan *</label>
-          <select id="service" required>
-            <option value="whatsapp">1. WhatsApp Consultation (₹300)</option>
-            <option value="audio">2. Audio Consultation (₹500)</option>
-            <option value="premium" selected>3. Premium Kundali PDF Report (₹995)</option>
-            <option value="gemstone">4. Gemstone Consultation + 2 Yr Varshphal (₹500)</option>
-          </select>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Full Name *</label>
-            <input type="text" id="name" required placeholder="Your full name" />
-          </div>
-          <div class="form-group">
-            <label for="phone">WhatsApp / Contact Number *</label>
-            <input type="tel" id="phone" required placeholder="e.g. 9888445118" />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="dob">Date of Birth *</label>
-            <input type="date" id="dob" required />
-          </div>
-          <div class="form-group">
-            <label for="tob">Time of Birth *</label>
-            <input type="time" id="tob" required />
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="pob">Place of Birth (City, State) *</label>
-          <input type="text" id="pob" required placeholder="e.g. Jalandhar, Punjab" />
-        </div>
-
-        <div class="form-group">
-          <label for="query">Specific Questions / Concerns</label>
-          <textarea id="query" rows="3" placeholder="Mention any specific problems related to Career, Marriage, Finance, etc."></textarea>
-        </div>
-
-        <div class="payment-options">
-          <button type="button" class="btn-pay-rzp" onclick="payViaRazorpay()">
-            <i class="fa-solid fa-credit-card"></i> Pay Online (UPI / Card / NetBanking)
-          </button>
-          <button type="submit" class="btn-whatsapp">
-            <i class="fa-brands fa-whatsapp"></i> Book & Confirm Details on WhatsApp
-          </button>
-        </div>
-      </form>
-    </div>
+  <!-- About Section -->
+  <section id="about" class="about-sec">
+    <h3>About Astro Paras Luthra</h3>
+    <p>With over <strong>10+ years of dedicated practice</strong> in Lal Kitab and Vedic astrology, Astro Paras Luthra has analyzed more than <strong>11,000+ horoscopes</strong>. The core methodology emphasizes logical, result-oriented, and simple home-based Lal Kitab remedies without fear-mongering or complicated rituals.</p>
+    <p>Every consultation is conducted with 100% confidentiality, guiding you towards peace, prosperity, and clarity in all life aspects.</p>
   </section>
 
-  <!-- Floating WhatsApp Quick Button -->
-  <a href="https://wa.me/919888445118?text=Hi%20Astro%20Paras%20Luthra,%20I%20want%20to%20book%20an%20astrology%20consultation." target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Astro Paras Luthra</h4>
+        <p>Authentic Lal Kitab & Vedic astrological consultations for holistic life solutions.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/astroparasluthra/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/AstroParasLuthra" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#services">WhatsApp Consultation</a>
+        <a href="#services">Audio Call Consultation</a>
+        <a href="#services">Premium Kundali Report</a>
+        <a href="#services">Gemstone Advice</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact & Support</h4>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+917986665118" style="display:inline;">+91 79866 65118</a> / <a href="tel:+919888445118" style="display:inline;">+91 98884 45118</a></p>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:destinyvaniya@gmail.com" style="display:inline;">destinyvaniya@gmail.com</a></p>
+        <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/919888445118" target="_blank" style="display:inline;">WhatsApp: +91 98884 45118</a></p>
+        <p><i class="fa-solid fa-clock"></i> Mon - Sun: 10:00 AM - 8:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Astro Paras Luthra. All rights reserved. | Built for Authentic Guidance
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Icon -->
+  <a href="https://wa.me/919888445118" class="floating-whatsapp" target="_blank" title="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <!-- Footer -->
- <footer>
-  <div class="footer-phones">
-    Direct Contact: 
-    <a href="tel:9888445118">+91 98884 45118</a> | 
-    <a href="tel:7986665118">+91 79866 65118</a>
-  </div>
-
-  <div class="social-links" style="display: flex; justify-content: center; gap: 1.2rem; margin: 1.2rem 0;">
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/astroparasluthra/" target="_blank" rel="noopener noreferrer" style="width: 42px; height: 42px; border-radius: 50%; background: #11131f; border: 1px solid rgba(212, 175, 55, 0.4); display: flex; align-items: center; justify-content: center; color: #e1306c; font-size: 1.3rem; text-decoration: none;">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-    
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/AstroParasLuthra" target="_blank" rel="noopener noreferrer" style="width: 42px; height: 42px; border-radius: 50%; background: #11131f; border: 1px solid rgba(212, 175, 55, 0.4); display: flex; align-items: center; justify-content: center; color: #1877f2; font-size: 1.3rem; text-decoration: none;">
-      <i class="fa-brands fa-facebook-f"></i>
-    </a>
-  </div>
-
-  <p>&copy; 2026 Astro Paras Luthra. All rights reserved. | Lal Kitab Astrology Services</p>
-</footer>
-
-  <!-- Script for Razorpay & WhatsApp Integration -->
-  <script>
-    // Paste your Razorpay Payment Links or Payment Page URLs here:
-   // Paste your Razorpay Payment Links or Payment Page URLs here:
-    const razorpayLinks = {
-      whatsapp: "https://rzp.io/rzp/0fZQZJv",     // ₹300 Link
-      audio: "https://rzp.io/rzp/dqTpV3R",       // ₹500 Link
-      premium: "https://rzp.io/rzp/OWiOPGrV",     // ₹995 Link
-      gemstone: "https://rzp.io/rzp/3yXmKfA"      // ₹500 Link
-    };
-
-    const serviceNames = {
-      whatsapp: "WhatsApp Consultation (₹300)",
-      audio: "Audio Consultation (₹500)",
-      premium: "Premium Kundali PDF (₹995)",
-      gemstone: "Gemstone Consultation (₹500)"
-    };
-
-    function selectService(serviceKey) {
-      document.getElementById('service').value = serviceKey;
-      document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function sendToWhatsApp(prefixNote = "") {
-      const serviceKey = document.getElementById('service').value;
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const dob = document.getElementById('dob').value;
-      const tob = document.getElementById('tob').value;
-      const pob = document.getElementById('pob').value;
-      const query = document.getElementById('query').value || 'None';
-
-      const targetPhone = "919888445118";
-
-      const text = `${prefixNote}*New Astrology Booking Details*%0A` +
-        `--------------------------------%0A` +
-        `*Plan:* ${encodeURIComponent(serviceNames[serviceKey])}%0A` +
-        `*Name:* ${encodeURIComponent(name)}%0A` +
-        `*Phone:* ${encodeURIComponent(phone)}%0A` +
-        `*DOB:* ${encodeURIComponent(dob)}%0A` +
-        `*TOB:* ${encodeURIComponent(tob)}%0A` +
-        `*POB:* ${encodeURIComponent(pob)}%0A` +
-        `*Queries:* ${encodeURIComponent(query)}`;
-
-      window.open(`https://wa.me/${targetPhone}?text=${text}`, '_blank');
-    }
-
-    function payViaRazorpay() {
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      const dob = document.getElementById('dob').value;
-      const tob = document.getElementById('tob').value;
-      const pob = document.getElementById('pob').value;
-
-      if (!name || !phone || !dob || !tob || !pob) {
-        alert("Please fill in your birth details before proceeding to payment.");
-        return;
-      }
-
-      const serviceKey = document.getElementById('service').value;
-      const targetUrl = razorpayLinks[serviceKey];
-
-      // Opens the Razorpay payment link in a new tab
-      window.open(targetUrl, '_blank');
-
-      // Also sends the details to your WhatsApp for recording
-      sendToWhatsApp("*[Payment Initiated via Razorpay]*%0A");
-    }
-
-    document.getElementById('consultationForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      sendToWhatsApp("");
-    });
-  </script>
 </body>
 </html>
