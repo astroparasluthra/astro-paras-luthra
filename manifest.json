@@ -2,6 +2,7 @@
   "name": "Astro Paras Luthra",
   "short_name": "Astro Paras",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#d4af37",
