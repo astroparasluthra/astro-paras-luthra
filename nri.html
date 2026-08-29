@@ -220,6 +220,28 @@
       box-shadow: 0 6px 25px rgba(2, 132, 199, 0.6);
     }
 
+    .btn-paypal-direct {
+      background: linear-gradient(135deg, #0070ba 0%, #003087 100%);
+      color: #fff;
+      font-weight: 800;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 112, 186, 0.35);
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    .btn-paypal-direct:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 112, 186, 0.5);
+    }
+
     .profile-card {
       position: relative;
       width: 280px;
@@ -335,12 +357,6 @@
       margin-bottom: 1.2rem;
     }
 
-    .price-value span {
-      font-size: 1rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
     .pricing-list {
       list-style: none;
       margin-bottom: 1.5rem;
@@ -439,7 +455,7 @@
       <a href="https://astroparasluthra.in/">Home</a>
       <a href="https://astroparasluthra.in/#services">Services</a>
       <a href="https://astroparasluthra.in/#courses">Lal Kitab Training</a>
-      <a href="#nri-booking" class="nav-contact-btn">Book Overseas Call ($35)</a>
+      <a href="#nri-booking" class="nav-contact-btn">Book Overseas Call ($35 USD)</a>
     </div>
   </nav>
 
@@ -453,6 +469,7 @@
         <p>Expert Lal Kitab horoscope analysis, career/business projections, marriage timeline, and simple practical remedies designed for clients living outside India.</p>
         <div class="hero-actions">
           <a href="#nri-booking" class="btn-nri-primary"><i class="fa-brands fa-whatsapp"></i> Book Consultation ($35 USD)</a>
+          <a href="https://paypal.me/AstroParasLuthra/35USD" target="_blank" class="btn-paypal-direct"><i class="fa-brands fa-paypal"></i> Pay $35 via PayPal</a>
         </div>
       </div>
       <div class="hero-image-wrap">
@@ -486,9 +503,9 @@
         <p>20 to 25 minutes of detailed 1-on-1 discussion over WhatsApp voice call with direct question-answer clarity.</p>
       </div>
       <div class="feature-box">
-        <div class="feature-icon"><i class="fa-solid fa-credit-card"></i></div>
+        <div class="feature-icon"><i class="fa-brands fa-paypal"></i></div>
         <h4>Easy Global Payments</h4>
-        <p>Accepting payments via direct Bank Wire, Remitly, Wise, Indian Net Banking, and major cards.</p>
+        <p>Instant payments via PayPal, International Cards, Bank Wire, Remitly & Wise.</p>
       </div>
     </div>
   </section>
@@ -497,15 +514,22 @@
     <div class="pricing-card">
       <div class="pricing-details">
         <h3>Overseas Voice Consultation</h3>
-        <div class="price-value">$35 USD <span>/ ₹2,900 INR</span></div>
+        <div class="price-value">$35 USD</div>
         <ul class="pricing-list">
           <li><i class="fa-solid fa-circle-check"></i> Complete Life Chart & Dasha Analysis</li>
           <li><i class="fa-solid fa-circle-check"></i> Career, PR/Immigration, Wealth & Marriage</li>
           <li><i class="fa-solid fa-circle-check"></i> 20-25 Min Live WhatsApp Voice Call</li>
           <li><i class="fa-solid fa-circle-check"></i> Customized Step-by-Step Upay</li>
         </ul>
-        <div style="background: #e0f2fe; padding: 0.8rem; border-radius: 10px; font-size: 0.85rem; color: #0369a1;">
-          <i class="fa-solid fa-info-circle"></i> Once you submit details, bank wire & Remitly transfer details will be shared on WhatsApp.
+        
+        <div style="margin-top: 1.5rem;">
+          <a href="https://paypal.me/AstroParasLuthra/35USD" target="_blank" class="btn-paypal-direct" style="width: 100%;">
+            <i class="fa-brands fa-paypal"></i> Pay $35 USD via PayPal (Instant)
+          </a>
+        </div>
+
+        <div style="background: #e0f2fe; padding: 0.8rem; border-radius: 10px; font-size: 0.85rem; color: #0369a1; margin-top: 1rem;">
+          <i class="fa-solid fa-info-circle"></i> Once payment or form is submitted, consultation time slot will be confirmed on WhatsApp.
         </div>
       </div>
 
@@ -536,7 +560,7 @@
             <textarea id="nriNotes" rows="2" placeholder="e.g. Career PR timing, marriage prospects"></textarea>
           </div>
           <button type="button" onclick="submitNriBooking()" class="btn-nri-primary" style="width: 100%; justify-content: center;">
-            <i class="fa-brands fa-whatsapp"></i> Send Details & Book ($35)
+            <i class="fa-brands fa-whatsapp"></i> Send Details & Book ($35 USD)
           </button>
         </form>
       </div>
@@ -594,7 +618,7 @@
       if (notes) {
         msg += `❓ *Questions/Focus:* ${notes}\n`;
       }
-      msg += `\n🌍 *Please share your Bank Account / Wire Transfer / Remitly / Wise payment details.*`;
+      msg += `\n🌍 *Payment Link (PayPal):* https://paypal.me/AstroParasLuthra/35USD`;
 
       window.open(`https://wa.me/919888445118?text=${encodeURIComponent(msg)}`, '_blank');
     }
