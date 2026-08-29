@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Successful | Astro Paras Luthra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1019996017533161');
+  fbq('track', 'PageView');
+
+  // URL से अमाउंट लेकर Purchase इवेंट ट्रिगर करेगा
+  const urlParams = new URLSearchParams(window.location.search);
+  const amount = urlParams.get('amount') || 900;
+
+  fbq('track', 'Purchase', {
+    value: Number(amount),
+    currency: 'INR',
+    content_name: 'Premium Kundali PDF Report'
+  });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1019996017533161&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fffaf0; text-align: center; padding: 50px 20px; color: #221c17; }
+    .card { background: #fff; max-width: 500px; margin: 0 auto; padding: 40px; border-radius: 20px; border: 2px solid #e2b475; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+    h1 { color: #8f4f09; font-size: 24px; margin-bottom: 12px; }
+    p { font-size: 16px; color: #555; line-height: 1.5; }
+    .btn { display: inline-block; background: #25d366; color: #fff; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>✅ Payment Successful!</h1>
+    <p>Thank you for purchasing the <strong>Premium Kundali Report</strong>.</p>
+    <p>Paras Ji will prepare your detailed report within 24–48 hours.</p>
+    <a href="https://wa.me/919888445118?text=Namaste%20Paras%20Ji%2C%20Maine%20Premium%20Kundali%20ki%20payment%20kar%20di%20hai.%20Please%20confirm." class="btn">
+      Confirm on WhatsApp
+    </a>
+  </div>
+</body>
+</html>
