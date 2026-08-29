@@ -18,14 +18,16 @@
   fbq('init', '1019996017533161');
   fbq('track', 'PageView');
 
-  // URL से अमाउंट लेकर Purchase इवेंट ट्रिगर करेगा
+  // URL से सर्विस का नाम और अमाउंट खुद उठा लेगा
   const urlParams = new URLSearchParams(window.location.search);
   const amount = urlParams.get('amount') || 900;
+  const service = urlParams.get('service') || 'Astrology Service';
 
+  // Meta Purchase Event Fire
   fbq('track', 'Purchase', {
     value: Number(amount),
     currency: 'INR',
-    content_name: 'Premium Kundali PDF Report'
+    content_name: service
   });
   </script>
   <noscript><img height="1" width="1" style="display:none"
@@ -35,20 +37,33 @@
 
   <style>
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fffaf0; text-align: center; padding: 50px 20px; color: #221c17; }
-    .card { background: #fff; max-width: 500px; margin: 0 auto; padding: 40px; border-radius: 20px; border: 2px solid #e2b475; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+    .card { background: #fff; max-width: 520px; margin: 0 auto; padding: 40px 25px; border-radius: 20px; border: 2px solid #e2b475; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
     h1 { color: #8f4f09; font-size: 24px; margin-bottom: 12px; }
-    p { font-size: 16px; color: #555; line-height: 1.5; }
-    .btn { display: inline-block; background: #25d366; color: #fff; padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 20px; font-size: 15px; }
+    p { font-size: 16px; color: #555; line-height: 1.5; margin-bottom: 10px; }
+    .amount-box { background: #fdf6ec; border: 1px dashed #d9822b; padding: 10px; border-radius: 10px; margin: 15px 0; font-weight: bold; color: #8f4f09; font-size: 18px; }
+    .btn { display: inline-block; background: #25d366; color: #fff; padding: 14px 28px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 15px; font-size: 15px; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
+    .btn:hover { background: #20b858; }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>✅ Payment Successful!</h1>
-    <p>Thank you for purchasing the <strong>Premium Kundali Report</strong>.</p>
-    <p>Paras Ji will prepare your detailed report within 24–48 hours.</p>
-    <a href="https://wa.me/919888445118?text=Namaste%20Paras%20Ji%2C%20Maine%20Premium%20Kundali%20ki%20payment%20kar%20di%20hai.%20Please%20confirm." class="btn">
+    <p>आपका पेमेंट सफलतापूर्वक प्राप्त हो गया है।</p>
+    <div class="amount-box" id="displayBox">
+      Payment Verified
+    </div>
+    <p>पारस जी द्वारा आपकी डिटेल्स का विश्लेषण करके जल्द ही संपर्क किया जाएगा।</p>
+    <a id="waConfirmBtn" href="https://wa.me/919888445118?text=Namaste%20Paras%20Ji%2C%20Maine%20payment%20complete%20kar%20di%20hai.%20Please%20confirm." class="btn">
       Confirm on WhatsApp
     </a>
   </div>
+
+  <script>
+    if (amount) {
+      document.getElementById('displayBox').innerText = 'Paid: ₹' + amount + ' (' + service + ')';
+      const customMsg = `Namaste Paras Ji, I have completed the payment of ₹${amount} for ${service}. Please confirm.`;
+      document.getElementById('waConfirmBtn').href = `https://wa.me/919888445118?text=${encodeURIComponent(customMsg)}`;
+    }
+  </script>
 </body>
 </html>
