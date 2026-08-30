@@ -1252,6 +1252,10 @@
         <div class="tile-icon-circle"><i class="fa-solid fa-book-open"></i></div>
         <span>Kundali Report</span>
       </div>
+      <div onclick="selectService('whatsapp')" class="tile-card">
+        <div class="tile-icon-circle"><i class="fa-solid fa-file-lines"></i></div>
+        <span>Kundli Summary (PDF)</span>
+      </div>
       <div onclick="selectService('audio')" class="tile-card">
         <div class="tile-icon-circle"><i class="fa-solid fa-phone-volume"></i></div>
         <span>Audio Call</span>
@@ -1313,16 +1317,17 @@
 
       <div class="service-box">
         <div>
-          <div class="service-icon-wrap"><i class="fa-brands fa-whatsapp"></i></div>
-          <h3>WhatsApp Consultation</h3>
+          <div class="service-icon-wrap"><i class="fa-solid fa-file-lines"></i></div>
+          <h3>Personalised Kundli Summary (PDF)</h3>
           <div class="price-tag">₹300</div>
           <ul class="features-list">
-            <li><i class="fa-solid fa-check"></i> 1-2 Specific Questions</li>
+            <li><i class="fa-solid fa-check"></i> 1-2 Specific Questions Answered</li>
+            <li><i class="fa-solid fa-check"></i> Key Planetary Strengths & Cautions</li>
             <li><i class="fa-solid fa-check"></i> Practical Lal Kitab Upay</li>
-            <li><i class="fa-solid fa-check"></i> Quick Audio/Text Reply</li>
+            <li><i class="fa-solid fa-check"></i> PDF Delivered on WhatsApp</li>
           </ul>
         </div>
-        <button onclick="selectService('whatsapp')" class="btn-action">Book on WhatsApp (₹300)</button>
+        <button onclick="selectService('whatsapp')" class="btn-action">Get Kundli Summary PDF (₹300)</button>
       </div>
 
       <div class="service-box">
@@ -1532,9 +1537,9 @@
               <option value="nri">🌍 Worldwide / NRI Consultation — $35 USD</option>
               <option value="course">🎓 Lal Kitab Master Training (1-to-1 Live) — ₹7,500</option>
               <option value="premium" selected>📜 Premium Kundali PDF Report — ₹995</option>
+              <option value="whatsapp">📄 Personalised Kundli Summary (PDF) — ₹300</option>
               <option value="audio">📞 Audio Call Consultation — ₹500</option>
               <option value="gemstone">💎 Gemstone Guidance — ₹500</option>
-              <option value="whatsapp">💬 WhatsApp Consultation — ₹300</option>
             </select>
           </div>
 
@@ -1711,6 +1716,7 @@
         <a href="https://astroparasluthra.in/nri.html">Worldwide / NRI Consultation ($35 USD)</a>
         <a href="#courses">Lal Kitab Master Training (₹7,500)</a>
         <a href="#services">Premium Kundali Report (₹995)</a>
+        <a href="#services" onclick="selectService('whatsapp')">Personalised Kundli Summary (₹300)</a>
         <a href="#services">Audio Call Consultation (₹500)</a>
         <a href="#reviews">Client Reviews</a>
       </div>
@@ -1928,7 +1934,6 @@
       }
     }
 
-    // PWA Service Worker & Install Logic
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }
