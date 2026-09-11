@@ -29,7 +29,7 @@
   <title>Astro Paras Luthra | Best Lal Kitab Astrologer & Worldwide NRI Consultation</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#d4af37">
-  <link rel="apple-touch-icon" href="paras-luthra.jpg">
+  <link rel="apple-touch-icon" href="https://astroparasluthra.in/paras-luthra.jpg">
 
   <meta name="title" content="Astro Paras Luthra | Best Lal Kitab Astrologer & Worldwide NRI Consultation" />
   <meta name="description" content="Worldwide Astrology Consultations for NRI clients across USA, Canada, UK, Australia & UAE. Practical Lal Kitab remedies and 1-to-1 Live Master Training by Astro Paras Luthra." />
@@ -187,6 +187,39 @@
       background: linear-gradient(135deg, #8f4f09 0%, #542b00 100%);
       color: #fff;
       padding: 4rem 2rem 6.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cosmos-scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .space-obj {
+      position: absolute;
+      user-select: none;
+      filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35));
+      transition: transform 0.12s cubic-bezier(0.2, 0.8, 0.2, 1);
+      will-change: transform;
+    }
+
+    .planet-sun { top: 8%; left: 45%; font-size: 4.8rem; }
+    .planet-jupiter { top: 18%; right: 12%; font-size: 3.6rem; }
+    .planet-mars { bottom: 15%; left: 8%; font-size: 2.4rem; }
+    .star-1 { top: 22%; left: 18%; font-size: 2rem; opacity: 0.8; }
+    .star-2 { top: 55%; right: 28%; font-size: 1.8rem; opacity: 0.7; }
+    .star-3 { bottom: 25%; right: 8%; font-size: 1.6rem; opacity: 0.8; }
+
+    @media (max-width: 768px) {
+      .planet-sun { font-size: 3rem; left: 65%; top: 4%; }
+      .planet-jupiter { font-size: 2.2rem; }
+      .planet-mars, .star-2 { display: none; }
     }
 
     .hero-container {
@@ -196,6 +229,8 @@
       grid-template-columns: 1.3fr 0.9fr;
       align-items: center;
       gap: 3rem;
+      position: relative;
+      z-index: 2;
     }
 
     @media (max-width: 900px) {
@@ -1217,6 +1252,15 @@
   </nav>
 
   <section class="hero-banner">
+    <div class="cosmos-scene">
+      <div class="space-obj planet-sun" data-speed="4">☀️</div>
+      <div class="space-obj planet-jupiter" data-speed="-3">🪐</div>
+      <div class="space-obj planet-mars" data-speed="5">🔴</div>
+      <div class="space-obj star-1" data-speed="-4">✨</div>
+      <div class="space-obj star-2" data-speed="3">⭐</div>
+      <div class="space-obj star-3" data-speed="-2">✨</div>
+    </div>
+
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-badge">
@@ -1248,6 +1292,10 @@
         <div class="tile-icon-circle" style="background: var(--saffron-gradient); color: #fff;"><i class="fa-solid fa-graduation-cap"></i></div>
         <span style="color: var(--saffron-dark);">Lal Kitab Course</span>
       </a>
+      <div onclick="selectService('karza')" class="tile-card" style="border: 1.5px solid #dc2626; background: #fef2f2;">
+        <div class="tile-icon-circle" style="background: #dc2626; color: #fff;"><i class="fa-solid fa-file-shield"></i></div>
+        <span style="color: #991b1b;">कर्ज़ मुक्ति (₹300)</span>
+      </div>
       <div onclick="selectService('premium')" class="tile-card">
         <div class="tile-icon-circle"><i class="fa-solid fa-book-open"></i></div>
         <span>Kundali Report</span>
@@ -1260,10 +1308,6 @@
         <div class="tile-icon-circle"><i class="fa-solid fa-phone-volume"></i></div>
         <span>Audio Call</span>
       </div>
-      <a href="#reviews" class="tile-card">
-        <div class="tile-icon-circle"><i class="fa-solid fa-star"></i></div>
-        <span>Client Reviews</span>
-      </a>
     </div>
   </div>
 
@@ -1294,6 +1338,31 @@
 
     <div class="services-grid">
       
+      <!-- 1. Karza Mukti Report (PDF) - ₹300 -->
+      <div class="service-box featured" style="border: 2px solid #dc2626; background: #fffdfd;">
+        <div class="badge-top" style="background: #dc2626;">कर्ज़ से राहत</div>
+        <div>
+          <div class="service-icon-wrap" style="color: #dc2626; border-color: #fca5a5;"><i class="fa-solid fa-file-shield"></i></div>
+          <h3>कर्ज़ मुक्ति रिपोर्ट (PDF)</h3>
+          <div class="price-tag" style="color: #dc2626;">₹300</div>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check" style="color: #dc2626;"></i> कर्ज़ और पैसों की तंगी का मुख्य ज्योतिषीय कारण</li>
+            <li><i class="fa-solid fa-check" style="color: #dc2626;"></i> सटीक कुंडली विश्लेषण व राहत का समय चक्र</li>
+            <li><i class="fa-solid fa-check" style="color: #dc2626;"></i> लाल किताब के अचूक व असरदार उपाय</li>
+            <li><i class="fa-solid fa-check" style="color: #dc2626;"></i> 24 घंटे में WhatsApp पर PDF डिलीवरी</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="https://rzp.io/rzp/UzHQ51qn" target="_blank" class="btn-action" style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); text-decoration: none;">
+            Get Karza Mukti Report (₹300)
+          </a>
+          <button onclick="selectService('karza')" class="btn-action" style="background: transparent; border: 1.5px solid #dc2626; color: #dc2626; box-shadow: none; padding: 0.6rem;">
+            Fill Form & Book
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. Worldwide NRI Card -->
       <div class="service-box nri-card">
         <div class="badge-top nri-badge">Worldwide / Any Country</div>
         <div>
@@ -1315,6 +1384,7 @@
         </div>
       </div>
 
+      <!-- 3. Personalised Kundli Summary -->
       <div class="service-box">
         <div>
           <div class="service-icon-wrap"><i class="fa-solid fa-file-lines"></i></div>
@@ -1330,6 +1400,7 @@
         <button onclick="selectService('whatsapp')" class="btn-action">Get Kundli Summary PDF (₹300)</button>
       </div>
 
+      <!-- 4. Audio Consultation -->
       <div class="service-box">
         <div>
           <div class="service-icon-wrap"><i class="fa-solid fa-phone-volume"></i></div>
@@ -1344,6 +1415,7 @@
         <button onclick="selectService('audio')" class="btn-action">Book Voice Call (₹500)</button>
       </div>
 
+      <!-- 5. Premium Kundali PDF -->
       <div class="service-box featured">
         <div class="badge-top">Most Detailed</div>
         <div>
@@ -1534,9 +1606,10 @@
           <div class="form-group full-width">
             <label for="service">Selected Service / Course *</label>
             <select id="service" name="service" onchange="checkNriService()" required>
+              <option value="karza" selected>🛡️ कर्ज़ मुक्ति रिपोर्ट (PDF) — ₹300</option>
               <option value="nri">🌍 Worldwide / NRI Consultation — $35 USD</option>
               <option value="course">🎓 Lal Kitab Master Training (1-to-1 Live) — ₹7,500</option>
-              <option value="premium" selected>📜 Premium Kundali PDF Report — ₹995</option>
+              <option value="premium">📜 Premium Kundali PDF Report — ₹995</option>
               <option value="whatsapp">📄 Personalised Kundli Summary (PDF) — ₹300</option>
               <option value="audio">📞 Audio Call Consultation — ₹500</option>
               <option value="gemstone">💎 Gemstone Guidance — ₹500</option>
@@ -1583,7 +1656,7 @@
 
           <div class="form-group full-width">
             <label for="notes">Question / Special Notes (Optional)</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Write your specific questions or convenient call timings."></textarea>
+            <textarea id="notes" name="notes" rows="3" placeholder="Write your specific questions or loan details."></textarea>
           </div>
         </div>
 
@@ -1713,11 +1786,11 @@
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
+        <a href="#services" onclick="selectService('karza')" style="color: #ef4444; font-weight: 700;">🛡️ कर्ज़ मुक्ति रिपोर्ट (₹300)</a>
         <a href="https://astroparasluthra.in/nri.html">Worldwide / NRI Consultation ($35 USD)</a>
         <a href="#courses">Lal Kitab Master Training (₹7,500)</a>
         <a href="#services">Premium Kundali Report (₹995)</a>
         <a href="#services" onclick="selectService('whatsapp')">Personalised Kundli Summary (₹300)</a>
-        <a href="#services">Audio Call Consultation (₹500)</a>
         <a href="#reviews">Client Reviews</a>
       </div>
       <div class="footer-col">
@@ -1739,7 +1812,7 @@
 
   <div id="pwa-install-banner" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 400px; background: #111827; border: 2px solid #d4af37; border-radius: 14px; padding: 12px 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.7); z-index: 999999; display: flex; align-items: center; justify-content: space-between; font-family: sans-serif;">
     <div style="display: flex; align-items: center; gap: 10px;">
-      <img src="paras-luthra.jpg" style="width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #d4af37; object-fit: cover;">
+      <img src="https://astroparasluthra.in/paras-luthra.jpg" onerror="this.onerror=null; this.src='paras-luthra.jpg';" style="width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #d4af37; object-fit: cover;">
       <div>
         <div style="color: #ffd700; font-size: 14px; font-weight: 700;">Astro Paras Luthra</div>
         <div style="color: #94a3b8; font-size: 11px;">Install App for Quick Access</div>
@@ -1753,6 +1826,7 @@
 
   <script>
     const razorpayLinks = {
+      karza: "https://rzp.io/rzp/UzHQ51qn",
       whatsapp: "https://rzp.io/rzp/0fZQZJv",
       audio: "https://rzp.io/rzp/dqTpV3R",
       premium: "https://rzp.io/rzp/OWiOPGrV",
@@ -1863,7 +1937,7 @@
       const notes = document.getElementById('notes').value.trim();
       const sVal = document.getElementById('service').value;
 
-      let msg = `*Namaste Paras Ji! I want to book a consultation / course enrollment.*\n\n`;
+      let msg = `*Namaste Paras Ji! I want to book a consultation / report.*\n\n`;
       msg += `📌 *Selected:* ${serviceName}\n`;
       msg += `👤 *Name:* ${name}\n`;
       msg += `📱 *Phone:* ${phone}\n`;
@@ -1874,7 +1948,9 @@
       if (notes) {
         msg += `❓ *Questions/Notes:* ${notes}\n`;
       }
-      if (sVal === 'nri') {
+      if (sVal === 'karza') {
+        msg += `\n💳 *Payment Link (Razorpay):* https://rzp.io/rzp/UzHQ51qn`;
+      } else if (sVal === 'nri') {
         msg += `\n🌍 *Payment Link (PayPal):* https://paypal.me/AstroParasLuthra/35USD`;
       } else {
         msg += `\nPlease guide me for the next steps.`;
@@ -1933,6 +2009,20 @@
         alert("Thank you for your constructive feedback. Paras Ji will personally review your suggestions to serve you better.");
       }
     }
+
+    // Cursor Parallax Movement for Floating Planets & Stars
+    document.addEventListener("mousemove", function (e) {
+      const objects = document.querySelectorAll(".space-obj");
+      const x = (window.innerWidth - e.pageX * 2) / 80;
+      const y = (window.innerHeight - e.pageY * 2) / 80;
+
+      objects.forEach((obj) => {
+        const speed = parseFloat(obj.getAttribute("data-speed")) || 2;
+        const moveX = x * speed;
+        const moveY = y * speed;
+        obj.style.transform = `translate(${moveX}px, ${moveY}px) rotate(${moveX * 0.25}deg)`;
+      });
+    });
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
