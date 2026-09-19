@@ -1292,6 +1292,10 @@
         <div class="tile-icon-circle" style="background: var(--saffron-gradient); color: #fff;"><i class="fa-solid fa-graduation-cap"></i></div>
         <span style="color: var(--saffron-dark);">Lal Kitab Course</span>
       </a>
+      <div onclick="selectService('fiveyear')" class="tile-card" style="border: 1.5px solid #b45309; background: #fffbeb;">
+        <div class="tile-icon-circle" style="background: #b45309; color: #fff;"><i class="fa-solid fa-calendar-days"></i></div>
+        <span style="color: #78350f;">5-Year Report (₹799)</span>
+      </div>
       <div onclick="selectService('karza')" class="tile-card" style="border: 1.5px solid #dc2626; background: #fef2f2;">
         <div class="tile-icon-circle" style="background: #dc2626; color: #fff;"><i class="fa-solid fa-file-shield"></i></div>
         <span style="color: #991b1b;">कर्ज़ मुक्ति (₹300)</span>
@@ -1299,10 +1303,6 @@
       <div onclick="selectService('premium')" class="tile-card">
         <div class="tile-icon-circle"><i class="fa-solid fa-book-open"></i></div>
         <span>Kundali Report</span>
-      </div>
-      <div onclick="selectService('whatsapp')" class="tile-card">
-        <div class="tile-icon-circle"><i class="fa-solid fa-file-lines"></i></div>
-        <span>Kundli Summary (PDF)</span>
       </div>
       <div onclick="selectService('audio')" class="tile-card">
         <div class="tile-icon-circle"><i class="fa-solid fa-phone-volume"></i></div>
@@ -1338,7 +1338,31 @@
 
     <div class="services-grid">
       
-      <!-- 1. Karza Mukti Report (PDF) - ₹300 -->
+      <!-- 1. 5-Year Lal Kitab Astrology Report (PDF) - ₹799 -->
+      <div class="service-box featured" style="border: 2px solid #b45309; background: #fffdfa;">
+        <div class="badge-top" style="background: #b45309;">Best Value (5 Years)</div>
+        <div>
+          <div class="service-icon-wrap" style="color: #b45309; border-color: #fde68a;"><i class="fa-solid fa-calendar-days"></i></div>
+          <h3>5-Year Lal Kitab Report</h3>
+          <div class="price-tag" style="color: #b45309;">₹799</div>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check" style="color: #b45309;"></i> 5 साल का विस्तृत वर्षवार (Year-by-Year) रोडमैप</li>
+            <li><i class="fa-solid fa-check" style="color: #b45309;"></i> करियर तरक्की, धन लाभ व निवेश के शुभ समय</li>
+            <li><i class="fa-solid fa-check" style="color: #b45309;"></i> विवाह, पारिवारिक शांति व संवेदनशील समय की पहचान</li>
+            <li><i class="fa-solid fa-check" style="color: #b45309;"></i> 5 साल के अचूक लाल किताब वर्षफल उपाय</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="https://rzp.io/rzp/JFT0jIUi" target="_blank" class="btn-action" style="background: linear-gradient(135deg, #b45309 0%, #78350f 100%); text-decoration: none;">
+            Get 5-Year Report (₹799)
+          </a>
+          <button onclick="selectService('fiveyear')" class="btn-action" style="background: transparent; border: 1.5px solid #b45309; color: #b45309; box-shadow: none; padding: 0.6rem;">
+            Fill Form & Book
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. Karza Mukti Report (PDF) - ₹300 -->
       <div class="service-box featured" style="border: 2px solid #dc2626; background: #fffdfd;">
         <div class="badge-top" style="background: #dc2626;">कर्ज़ से राहत</div>
         <div>
@@ -1362,7 +1386,7 @@
         </div>
       </div>
 
-      <!-- 2. Worldwide NRI Card -->
+      <!-- 3. Worldwide NRI Card -->
       <div class="service-box nri-card">
         <div class="badge-top nri-badge">Worldwide / Any Country</div>
         <div>
@@ -1382,22 +1406,6 @@
             <i class="fa-brands fa-paypal"></i> Pay $35 via PayPal
           </a>
         </div>
-      </div>
-
-      <!-- 3. Personalised Kundli Summary -->
-      <div class="service-box">
-        <div>
-          <div class="service-icon-wrap"><i class="fa-solid fa-file-lines"></i></div>
-          <h3>Personalised Kundli Summary (PDF)</h3>
-          <div class="price-tag">₹300</div>
-          <ul class="features-list">
-            <li><i class="fa-solid fa-check"></i> 1-2 Specific Questions Answered</li>
-            <li><i class="fa-solid fa-check"></i> Key Planetary Strengths & Cautions</li>
-            <li><i class="fa-solid fa-check"></i> Practical Lal Kitab Upay</li>
-            <li><i class="fa-solid fa-check"></i> PDF Delivered on WhatsApp</li>
-          </ul>
-        </div>
-        <button onclick="selectService('whatsapp')" class="btn-action">Get Kundli Summary PDF (₹300)</button>
       </div>
 
       <!-- 4. Audio Consultation -->
@@ -1606,7 +1614,8 @@
           <div class="form-group full-width">
             <label for="service">Selected Service / Course *</label>
             <select id="service" name="service" onchange="checkNriService()" required>
-              <option value="karza" selected>🛡️ कर्ज़ मुक्ति रिपोर्ट (PDF) — ₹300</option>
+              <option value="fiveyear" selected>📅 5-Year Lal Kitab Report (PDF) — ₹799</option>
+              <option value="karza">🛡️ कर्ज़ मुक्ति रिपोर्ट (PDF) — ₹300</option>
               <option value="nri">🌍 Worldwide / NRI Consultation — $35 USD</option>
               <option value="course">🎓 Lal Kitab Master Training (1-to-1 Live) — ₹7,500</option>
               <option value="premium">📜 Premium Kundali PDF Report — ₹995</option>
@@ -1656,7 +1665,7 @@
 
           <div class="form-group full-width">
             <label for="notes">Question / Special Notes (Optional)</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Write your specific questions or loan details."></textarea>
+            <textarea id="notes" name="notes" rows="3" placeholder="Write your specific questions or areas of focus."></textarea>
           </div>
         </div>
 
@@ -1786,6 +1795,7 @@
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
+        <a href="#services" onclick="selectService('fiveyear')" style="color: #f59e0b; font-weight: 700;">📅 5-Year Lal Kitab Report (₹799)</a>
         <a href="#services" onclick="selectService('karza')" style="color: #ef4444; font-weight: 700;">🛡️ कर्ज़ मुक्ति रिपोर्ट (₹300)</a>
         <a href="https://astroparasluthra.in/nri.html">Worldwide / NRI Consultation ($35 USD)</a>
         <a href="#courses">Lal Kitab Master Training (₹7,500)</a>
@@ -1826,6 +1836,7 @@
 
   <script>
     const razorpayLinks = {
+      fiveyear: "https://rzp.io/rzp/JFT0jIUi",
       karza: "https://rzp.io/rzp/UzHQ51qn",
       whatsapp: "https://rzp.io/rzp/0fZQZJv",
       audio: "https://rzp.io/rzp/dqTpV3R",
@@ -1948,8 +1959,10 @@
       if (notes) {
         msg += `❓ *Questions/Notes:* ${notes}\n`;
       }
-      if (sVal === 'karza') {
-        msg += `\n💳 *Payment Link (Razorpay):* https://rzp.io/rzp/UzHQ51qn`;
+      if (sVal === 'fiveyear') {
+        msg += `\n💳 *Payment Link (Razorpay ₹799):* https://rzp.io/rzp/JFT0jIUi`;
+      } else if (sVal === 'karza') {
+        msg += `\n💳 *Payment Link (Razorpay ₹300):* https://rzp.io/rzp/UzHQ51qn`;
       } else if (sVal === 'nri') {
         msg += `\n🌍 *Payment Link (PayPal):* https://paypal.me/AstroParasLuthra/35USD`;
       } else {
