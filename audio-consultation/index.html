@@ -69,7 +69,6 @@
       padding-bottom: 2rem;
     }
 
-    /* Minimal Ad Header */
     .ad-header {
       background: #ffffff;
       border-bottom: 1px solid var(--border-warm);
@@ -108,7 +107,6 @@
       padding: 0 1rem;
     }
 
-    /* Hero Offer Card */
     .hero-box {
       background: linear-gradient(135deg, #8f4f09 0%, #542b00 100%);
       color: #ffffff;
@@ -165,7 +163,6 @@
       opacity: 0.8;
     }
 
-    /* Key Benefits Grid */
     .benefits-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -199,7 +196,6 @@
       color: var(--text-muted);
     }
 
-    /* Direct Booking Form */
     .form-container {
       background: #ffffff;
       border: 2px solid var(--border-gold);
@@ -313,7 +309,6 @@
       opacity: 0.93;
     }
 
-    /* Trust Footer */
     .trust-footer {
       text-align: center;
       margin-top: 2rem;
@@ -340,8 +335,8 @@
       <p>Direct 15–20 min personal discussion on WhatsApp call with Astro Paras Luthra. Get straightforward answers and logical Lal Kitab remedies without fear-mongering.</p>
       
       <div class="pricing-strip">
-        <span>Fee: ₹500</span>
-        <span class="strike">₹1,100</span>
+        <span>Fee: ₹1,100</span>
+        <span class="strike">₹2,100</span>
       </div>
     </div>
 
@@ -376,8 +371,8 @@
       <form id="leadForm">
         <input type="hidden" name="access_key" value="0b63492c-be0b-4ee1-b18c-56c1a3abe61b" />
         <input type="hidden" name="from_name" value="Audio Consultation Landing Page" />
-        <input type="hidden" name="subject" value="New Audio Call Booking (₹500)" />
-        <input type="hidden" name="service" value="Audio Call Consultation (₹500)" />
+        <input type="hidden" name="subject" value="New Audio Call Booking (₹1,100)" />
+        <input type="hidden" name="service" value="Audio Call Consultation (₹1,100)" />
 
         <div class="form-grid">
           <div class="f-group">
@@ -422,7 +417,7 @@
 
         <div class="btn-row">
           <button type="button" id="payBtn" onclick="handlePayOnline()" class="btn-pay">
-            <i class="fa-solid fa-lock"></i> Pay ₹500 & Book Call
+            <i class="fa-solid fa-lock"></i> Pay ₹1,100 & Book Call
           </button>
           <button type="button" onclick="handleWhatsAppSubmit()" class="btn-wa">
             <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
@@ -438,7 +433,7 @@
   </main>
 
   <script>
-    const RAZORPAY_URL = "https://rzp.io/rzp/dqTpV3R";
+    const RAZORPAY_URL = "https://rzp.io/rzp/7XkPNvJ";
 
     function validateForm() {
       const name = document.getElementById('name').value.trim();
@@ -459,8 +454,8 @@
 
       if (typeof fbq === 'function') {
         fbq('track', 'InitiateCheckout', {
-          content_name: 'Audio Consultation (₹500)',
-          value: 500,
+          content_name: 'Audio Consultation (₹1,100)',
+          value: 1100,
           currency: 'INR'
         });
       }
@@ -489,8 +484,8 @@
 
       if (typeof fbq === 'function') {
         fbq('track', 'Lead', {
-          content_name: 'Audio Consultation WhatsApp (₹500)',
-          value: 500,
+          content_name: 'Audio Consultation WhatsApp (₹1,100)',
+          value: 1100,
           currency: 'INR'
         });
       }
@@ -503,7 +498,7 @@
       const pob = document.getElementById('pob').value.trim();
       const notes = document.getElementById('notes').value.trim();
 
-      let msg = `*Namaste Paras Ji! I want to book an Audio Consultation (₹500).*\n\n`;
+      let msg = `*Namaste Paras Ji! I want to book an Audio Consultation (₹1,100).*\n\n`;
       msg += `👤 *Name:* ${name}\n`;
       msg += `📱 *Phone:* ${phone}\n`;
       msg += `⚧ *Gender:* ${gender}\n`;
