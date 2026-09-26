@@ -32,8 +32,8 @@
   <link rel="apple-touch-icon" href="https://astroparasluthra.in/paras-luthra.jpg">
 
   <meta name="title" content="Astro Paras Luthra | Best Lal Kitab Astrologer & Worldwide NRI Consultation" />
-  <meta name="description" content="Worldwide Astrology Consultations for NRI clients across USA, Canada, UK, Australia & UAE. Practical Lal Kitab remedies and 1-to-1 Live Master Training by Astro Paras Luthra." />
-  <meta name="keywords" content="Worldwide Astrology Consultation, NRI Astrologer Worldwide, Global Astrology Consultation, Astro Paras Luthra, Best Lal Kitab Astrologer, Learn Lal Kitab Course, Online Astrology Consultation, Lal Kitab Remedies, Vedic Astrologer Punjab India, Kundali Prediction" />
+  <meta name="description" content="Worldwide Astrology Consultations for NRI clients across USA, Canada, UK, Australia & UAE. Practical Lal Kitab remedies, office consultations in Jalandhar, and 1-to-1 Live Master Training by Astro Paras Luthra." />
+  <meta name="keywords" content="Worldwide Astrology Consultation, In-Person Astrology Consultation Jalandhar, NRI Astrologer Worldwide, Global Astrology Consultation, Astro Paras Luthra, Best Lal Kitab Astrologer, Learn Lal Kitab Course, Online Astrology Consultation, Lal Kitab Remedies, Vedic Astrologer Punjab India, Kundali Prediction" />
   <meta name="author" content="Astro Paras Luthra" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://astroparasluthra.in/" />
@@ -41,7 +41,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://astroparasluthra.in/" />
   <meta property="og:title" content="Astro Paras Luthra | Authentic Lal Kitab Astrology & Global Consultation" />
-  <meta property="og:description" content="Worldwide Astrology Consultations for clients in all countries across the globe. Practical remedies and 1-to-1 live training." />
+  <meta property="og:description" content="Worldwide Astrology Consultations, in-person office consultations, practical remedies and 1-to-1 live training." />
   <meta property="og:image" content="https://astroparasluthra.in/paras-luthra.jpg" />
 
   <script type="application/ld+json">
@@ -52,16 +52,18 @@
     "image": "https://astroparasluthra.in/paras-luthra.jpg",
     "url": "https://astroparasluthra.in",
     "telephone": "+919888445118",
-    "priceRange": "$35 - ₹7500",
+    "priceRange": "₹300 - ₹7500 / $35 USD",
     "address": {
       "@type": "PostalAddress",
+      "addressLocality": "Jalandhar",
+      "addressRegion": "Punjab",
       "addressCountry": "IN"
     },
     "founder": {
       "@type": "Person",
       "name": "Paras Luthra"
     },
-    "description": "Authentic Lal Kitab & Vedic Astrological Consultations Worldwide, Global NRI Services in all countries, and 1-to-1 Master Training Programs."
+    "description": "Authentic Lal Kitab & Vedic Astrological Consultations Worldwide, In-Person Office Consultations in Jalandhar, and 1-to-1 Master Training Programs."
   }
   </script>
 
@@ -496,6 +498,11 @@
       background: #f0f9ff;
     }
 
+    .service-box.office-card {
+      border: 2px solid #15803d;
+      background: #f0fdf4;
+    }
+
     .badge-top {
       position: absolute;
       top: -12px;
@@ -511,6 +518,10 @@
 
     .badge-top.nri-badge {
       background: #0284c7;
+    }
+
+    .badge-top.office-badge {
+      background: #15803d;
     }
 
     .service-icon-wrap {
@@ -602,6 +613,28 @@
     .btn-nri-action:hover {
       opacity: 0.92;
       box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+    }
+
+    .btn-office-action {
+      background: linear-gradient(135deg, #15803d 0%, #0f5132 100%);
+      color: #fff;
+      text-align: center;
+      padding: 0.85rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      display: block;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(21, 128, 61, 0.3);
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      font-size: 0.95rem;
+    }
+
+    .btn-office-action:hover {
+      opacity: 0.92;
+      box-shadow: 0 6px 20px rgba(21, 128, 61, 0.45);
     }
 
     .btn-paypal-card {
@@ -893,6 +926,17 @@
       padding: 1rem;
       font-size: 0.88rem;
       color: #0369a1;
+      display: none;
+    }
+
+    .office-notice-box {
+      grid-column: 1 / -1;
+      background: #f0fdf4;
+      border: 1.5px dashed #15803d;
+      border-radius: 12px;
+      padding: 1rem;
+      font-size: 0.88rem;
+      color: #166534;
       display: none;
     }
 
@@ -1232,7 +1276,7 @@
       <i class="fa-solid fa-envelope"></i> <a href="mailto:destinyvaniya@gmail.com">destinyvaniya@gmail.com</a>
     </div>
     <div>
-      <span>Worldwide Consultations (NRI / Global)</span>
+      <span>Worldwide Consultations & In-Person Jalandhar Office</span>
       <a href="#booking"><i class="fa-solid fa-calendar-check"></i> Instant Booking</a>
     </div>
   </div>
@@ -1243,7 +1287,8 @@
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
-      <a href="https://astroparasluthra.in/nri.html" style="color: #0284c7; font-weight: 800;"><i class="fa-solid fa-earth-americas"></i> NRI Consultation ($35 USD)</a>
+      <a href="#services" onclick="selectService('office')" style="color: #15803d; font-weight: 800;"><i class="fa-solid fa-building-user"></i> Office Visit (₹1,100)</a>
+      <a href="https://astroparasluthra.in/nri.html" style="color: #0284c7; font-weight: 800;"><i class="fa-solid fa-earth-americas"></i> NRI ($35 USD)</a>
       <a href="#courses" style="color: var(--saffron-dark); font-weight: 800;"><i class="fa-solid fa-graduation-cap"></i> Lal Kitab Course</a>
       <a href="#reviews">Reviews</a>
       <a href="#about">About</a>
@@ -1267,10 +1312,10 @@
           <i class="fa-solid fa-crown"></i> Authentic Lal Kitab & Vedic Astrologer & Mentor
         </div>
         <h1>Astro Paras Luthra</h1>
-        <p>Get precise, logical astrological guidance, practical Lal Kitab remedies, worldwide NRI consultations, and authentic 1-to-1 Live Master Training backed by 10+ years of dedicated expertise.</p>
+        <p>Get precise, logical astrological guidance, practical Lal Kitab remedies, in-person office consultations in Jalandhar, worldwide NRI consultations, and 1-to-1 Live Master Training backed by 10+ years of dedicated expertise.</p>
         <div class="hero-actions">
-          <a href="#booking" onclick="selectService('nri')" class="btn-gold"><i class="fa-solid fa-earth-americas"></i> Worldwide Consultation ($35 USD)</a>
-          <a href="#courses" class="btn-outline-hero"><i class="fa-solid fa-graduation-cap"></i> Lal Kitab Course (₹7,500)</a>
+          <a href="#booking" onclick="selectService('office')" class="btn-gold"><i class="fa-solid fa-building-user"></i> Office Consultation (₹1,100)</a>
+          <a href="#booking" onclick="selectService('nri')" class="btn-outline-hero"><i class="fa-solid fa-earth-americas"></i> Worldwide NRI ($35 USD)</a>
         </div>
       </div>
       <div class="hero-image-wrap">
@@ -1284,30 +1329,30 @@
 
   <div class="quick-tiles-wrapper">
     <div class="quick-tiles">
-      <a href="https://astroparasluthra.in/nri.html" class="tile-card" style="border: 1.5px solid #0284c7; background: #f0f9ff; text-decoration: none;">
-        <div class="tile-icon-circle" style="background: #0284c7; color: #fff;"><i class="fa-solid fa-earth-americas"></i></div>
-        <span style="color: #0369a1;">Worldwide NRI ($35)</span>
-      </a>
-      <a href="#courses" class="tile-card" style="border: 1.5px solid var(--saffron-gold); background: #fffaf0;">
-        <div class="tile-icon-circle" style="background: var(--saffron-gradient); color: #fff;"><i class="fa-solid fa-graduation-cap"></i></div>
-        <span style="color: var(--saffron-dark);">Lal Kitab Course</span>
-      </a>
+      <div onclick="selectService('office')" class="tile-card" style="border: 1.5px solid #15803d; background: #f0fdf4;">
+        <div class="tile-icon-circle" style="background: #15803d; color: #fff;"><i class="fa-solid fa-building-user"></i></div>
+        <span style="color: #166534;">Office Visit (₹1,100)</span>
+      </div>
+      <div onclick="selectService('audio')" class="tile-card" style="border: 1.5px solid var(--saffron-gold); background: #fffaf0;">
+        <div class="tile-icon-circle" style="background: var(--saffron-gradient); color: #fff;"><i class="fa-solid fa-phone-volume"></i></div>
+        <span style="color: var(--saffron-dark);">Audio Call (₹1,100)</span>
+      </div>
       <div onclick="selectService('fiveyear')" class="tile-card" style="border: 1.5px solid #b45309; background: #fffbeb;">
         <div class="tile-icon-circle" style="background: #b45309; color: #fff;"><i class="fa-solid fa-calendar-days"></i></div>
         <span style="color: #78350f;">5-Year Report (₹799)</span>
+      </div>
+      <div onclick="selectService('whatsapp')" class="tile-card">
+        <div class="tile-icon-circle"><i class="fa-solid fa-file-lines"></i></div>
+        <span>Kundli Summary (₹500)</span>
       </div>
       <div onclick="selectService('karza')" class="tile-card" style="border: 1.5px solid #dc2626; background: #fef2f2;">
         <div class="tile-icon-circle" style="background: #dc2626; color: #fff;"><i class="fa-solid fa-file-shield"></i></div>
         <span style="color: #991b1b;">कर्ज़ मुक्ति (₹300)</span>
       </div>
-      <div onclick="selectService('premium')" class="tile-card">
-        <div class="tile-icon-circle"><i class="fa-solid fa-book-open"></i></div>
-        <span>Kundali Report</span>
-      </div>
-      <div onclick="selectService('audio')" class="tile-card">
-        <div class="tile-icon-circle"><i class="fa-solid fa-phone-volume"></i></div>
-        <span>Audio Call</span>
-      </div>
+      <a href="https://astroparasluthra.in/nri.html" class="tile-card" style="border: 1.5px solid #0284c7; background: #f0f9ff; text-decoration: none;">
+        <div class="tile-icon-circle" style="background: #0284c7; color: #fff;"><i class="fa-solid fa-earth-americas"></i></div>
+        <span style="color: #0369a1;">NRI Global ($35)</span>
+      </a>
     </div>
   </div>
 
@@ -1337,8 +1382,56 @@
     </div>
 
     <div class="services-grid">
-      
-      <!-- 1. 5-Year Lal Kitab Astrology Report (PDF) - ₹799 -->
+
+      <!-- 1. In-Person Office Consultation (₹1,100) -->
+      <div class="service-box office-card">
+        <div class="badge-top office-badge">In-Person Meeting</div>
+        <div>
+          <div class="service-icon-wrap" style="color: #15803d; border-color: #86efac;"><i class="fa-solid fa-building-user"></i></div>
+          <h3>In-Person Office Consultation</h3>
+          <div class="price-tag" style="color: #15803d;">₹1,100</div>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check" style="color: #15803d;"></i> Face-to-Face Meeting at Jalandhar Office</li>
+            <li><i class="fa-solid fa-check" style="color: #15803d;"></i> Detailed Horoscope & Face/Hand Reading Analysis</li>
+            <li><i class="fa-solid fa-check" style="color: #15803d;"></i> Unlimited Questions & In-Depth Discussion</li>
+            <li><i class="fa-solid fa-check" style="color: #15803d;"></i> Customized Written Lal Kitab Upay Sheet</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="https://rzp.io/rzp/HS62mRz" target="_blank" class="btn-office-action" style="text-decoration: none;">
+            Pay ₹1,100 & Book Office Slot
+          </a>
+          <button onclick="selectService('office')" class="btn-office-action" style="background: transparent; border: 1.5px solid #15803d; color: #15803d; box-shadow: none; padding: 0.6rem;">
+            Fill Form & Book
+          </button>
+        </div>
+      </div>
+
+      <!-- 2. Audio Consultation (₹1,100) -->
+      <div class="service-box featured">
+        <div class="badge-top">Direct Phone Discussion</div>
+        <div>
+          <div class="service-icon-wrap"><i class="fa-solid fa-phone-volume"></i></div>
+          <h3>1-on-1 Audio Call Consultation</h3>
+          <div class="price-tag">₹1,100</div>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check"></i> 15-20 Min Direct Private Voice Call</li>
+            <li><i class="fa-solid fa-check"></i> Complete Chart & Dasha Timing Analysis</li>
+            <li><i class="fa-solid fa-check"></i> Clear Answers to Career, Marriage & Wealth</li>
+            <li><i class="fa-solid fa-check"></i> Easy Practical Lal Kitab Upay on WhatsApp</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="https://rzp.io/rzp/7XkPNvJ" target="_blank" class="btn-action" style="text-decoration: none;">
+            Pay ₹1,100 & Book Call
+          </a>
+          <button onclick="selectService('audio')" class="btn-action" style="background: transparent; border: 1.5px solid var(--saffron-gold); color: var(--saffron-dark); box-shadow: none; padding: 0.6rem;">
+            Fill Form & Book
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. 5-Year Lal Kitab Astrology Report (PDF) - ₹799 -->
       <div class="service-box featured" style="border: 2px solid #b45309; background: #fffdfa;">
         <div class="badge-top" style="background: #b45309;">Best Value (5 Years)</div>
         <div>
@@ -1362,7 +1455,30 @@
         </div>
       </div>
 
-      <!-- 2. Karza Mukti Report (PDF) - ₹300 -->
+      <!-- 4. Personalised Kundli Summary (PDF) - ₹500 -->
+      <div class="service-box">
+        <div>
+          <div class="service-icon-wrap"><i class="fa-solid fa-file-lines"></i></div>
+          <h3>Personalised Kundli Summary (PDF)</h3>
+          <div class="price-tag">₹500</div>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check"></i> 1-2 Specific Questions Answered</li>
+            <li><i class="fa-solid fa-check"></i> Key Planetary Strengths & Cautions</li>
+            <li><i class="fa-solid fa-check"></i> Practical Lal Kitab Upay</li>
+            <li><i class="fa-solid fa-check"></i> Formatted PDF Delivered on WhatsApp</li>
+          </ul>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <a href="https://rzp.io/rzp/esoVgaj" target="_blank" class="btn-action" style="text-decoration: none;">
+            Pay ₹500 & Get PDF
+          </a>
+          <button onclick="selectService('whatsapp')" class="btn-action" style="background: transparent; border: 1.5px solid var(--saffron-gold); color: var(--saffron-dark); box-shadow: none; padding: 0.6rem;">
+            Fill Form & Book
+          </button>
+        </div>
+      </div>
+
+      <!-- 5. Karza Mukti Report (PDF) - ₹300 -->
       <div class="service-box featured" style="border: 2px solid #dc2626; background: #fffdfd;">
         <div class="badge-top" style="background: #dc2626;">कर्ज़ से राहत</div>
         <div>
@@ -1386,7 +1502,7 @@
         </div>
       </div>
 
-      <!-- 3. Worldwide NRI Card -->
+      <!-- 6. Worldwide NRI Card -->
       <div class="service-box nri-card">
         <div class="badge-top nri-badge">Worldwide / Any Country</div>
         <div>
@@ -1408,22 +1524,7 @@
         </div>
       </div>
 
-      <!-- 4. Audio Consultation -->
-      <div class="service-box">
-        <div>
-          <div class="service-icon-wrap"><i class="fa-solid fa-phone-volume"></i></div>
-          <h3>Audio Consultation</h3>
-          <div class="price-tag">₹500</div>
-          <ul class="features-list">
-            <li><i class="fa-solid fa-check"></i> 15-20 Min Voice Call</li>
-            <li><i class="fa-solid fa-check"></i> In-depth Chart Discussion</li>
-            <li><i class="fa-solid fa-check"></i> Easy Step-by-Step Upay</li>
-          </ul>
-        </div>
-        <button onclick="selectService('audio')" class="btn-action">Book Voice Call (₹500)</button>
-      </div>
-
-      <!-- 5. Premium Kundali PDF -->
+      <!-- 7. Premium Kundali PDF -->
       <div class="service-box featured">
         <div class="badge-top">Most Detailed</div>
         <div>
@@ -1603,7 +1704,7 @@
   <section id="booking" class="booking-section">
     <div class="booking-card">
       <h3>Enter Details & Book / Enroll</h3>
-      <p>Please enter accurate details for consultations or training enrollment</p>
+      <p>Please enter accurate details for consultations, office visits, or training enrollment</p>
 
       <form id="astrologyForm">
         <input type="hidden" name="access_key" value="0b63492c-be0b-4ee1-b18c-56c1a3abe61b" />
@@ -1613,16 +1714,21 @@
         <div class="form-grid">
           <div class="form-group full-width">
             <label for="service">Selected Service / Course *</label>
-            <select id="service" name="service" onchange="checkNriService()" required>
-              <option value="fiveyear" selected>📅 5-Year Lal Kitab Report (PDF) — ₹799</option>
+            <select id="service" name="service" onchange="checkServiceNotices()" required>
+              <option value="office" selected>🏢 In-Person Office Consultation (Jalandhar) — ₹1,100</option>
+              <option value="audio">📞 Audio Call Consultation (15-20 Min) — ₹1,100</option>
+              <option value="fiveyear">📅 5-Year Lal Kitab Report (PDF) — ₹799</option>
+              <option value="whatsapp">📄 Personalised Kundli Summary (PDF) — ₹500</option>
               <option value="karza">🛡️ कर्ज़ मुक्ति रिपोर्ट (PDF) — ₹300</option>
               <option value="nri">🌍 Worldwide / NRI Consultation — $35 USD</option>
               <option value="course">🎓 Lal Kitab Master Training (1-to-1 Live) — ₹7,500</option>
               <option value="premium">📜 Premium Kundali PDF Report — ₹995</option>
-              <option value="whatsapp">📄 Personalised Kundli Summary (PDF) — ₹300</option>
-              <option value="audio">📞 Audio Call Consultation — ₹500</option>
               <option value="gemstone">💎 Gemstone Guidance — ₹500</option>
             </select>
+          </div>
+
+          <div id="officeNotice" class="office-notice-box" style="display: block;">
+            <i class="fa-solid fa-location-dot"></i> <strong>Office Visit Details:</strong> In-person consultations are conducted at our Jalandhar (Punjab) office by prior appointment. After booking, our team will confirm your meeting date and time slot.
           </div>
 
           <div id="nriNotice" class="nri-notice-box">
@@ -1660,12 +1766,12 @@
 
           <div class="form-group">
             <label for="pob">Place of Birth / City, Country *</label>
-            <input type="text" id="pob" name="pob" placeholder="e.g. London, UK or Toronto, Canada" required />
+            <input type="text" id="pob" name="pob" placeholder="e.g. Jalandhar, Punjab or Toronto, Canada" required />
           </div>
 
           <div class="form-group full-width">
             <label for="notes">Question / Special Notes (Optional)</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Write your specific questions or areas of focus."></textarea>
+            <textarea id="notes" name="notes" rows="3" placeholder="Write your specific questions or appointment preference."></textarea>
           </div>
         </div>
 
@@ -1691,13 +1797,13 @@
       <div class="review-card">
         <div>
           <div class="review-stars">★★★★★</div>
-          <p class="review-text">"The Lal Kitab training and personal consultation while living overseas was life changing. Paras Ji gave very practical remedies that were easy to follow abroad."</p>
+          <p class="review-text">"Had an in-person consultation at Paras Ji's Jalandhar office. His chart reading was so accurate and the Lal Kitab remedies were completely practical. Highly recommended!"</p>
         </div>
         <div class="reviewer-meta">
-          <div class="reviewer-avatar">AS</div>
+          <div class="reviewer-avatar">VS</div>
           <div class="reviewer-info">
-            <h5>Amanpreet Singh</h5>
-            <span>Overseas Client</span>
+            <h5>Vikram Sethi</h5>
+            <span>Jalandhar (Office Consultation)</span>
           </div>
         </div>
       </div>
@@ -1719,13 +1825,13 @@
       <div class="review-card">
         <div>
           <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Got my Detailed Kundali PDF Report. Highly accurate timeline regarding marriage and career. Truly grateful for genuine Vedic guidance!"</p>
+          <p class="review-text">"The Lal Kitab training and personal consultation while living overseas was life changing. Paras Ji gave very practical remedies that were easy to follow abroad."</p>
         </div>
         <div class="reviewer-meta">
-          <div class="reviewer-avatar">PS</div>
+          <div class="reviewer-avatar">AS</div>
           <div class="reviewer-info">
-            <h5>Pooja Sharma</h5>
-            <span>Chandigarh</span>
+            <h5>Amanpreet Singh</h5>
+            <span>Overseas Client</span>
           </div>
         </div>
       </div>
@@ -1779,7 +1885,7 @@
     <div>
       <h3>About Astro Paras Luthra</h3>
       <p>With over <strong>10+ years of dedicated practice</strong> in Lal Kitab and Vedic astrology, Astro Paras Luthra has analyzed more than <strong>11,000+ horoscopes</strong> globally. The core methodology emphasizes logical, result-oriented, and simple practical Lal Kitab remedies without fear-mongering or complicated rituals.</p>
-      <p>In addition to consultations for clients worldwide in all countries, Astro Paras Luthra provides exclusive <strong>1-to-1 Live Master Training</strong> to teach the authentic principles of Lal Kitab predictive techniques with lifetime clarity.</p>
+      <p>Consultations are offered in-person at the <strong>Jalandhar (Punjab) office</strong>, through private worldwide audio sessions, and via exclusive <strong>1-to-1 Live Master Training</strong> programs.</p>
     </div>
   </section>
 
@@ -1787,7 +1893,7 @@
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Astro Paras Luthra</h4>
-        <p>Authentic Lal Kitab & Vedic astrological consultations worldwide and 1-to-1 personalized training programs.</p>
+        <p>Authentic Lal Kitab & Vedic astrological consultations worldwide, in-person office consultations in Jalandhar, and 1-to-1 personalized training programs.</p>
         <div class="footer-socials">
           <a href="https://www.instagram.com/astroparasluthra/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://www.facebook.com/AstroParasLuthra" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
@@ -1795,16 +1901,17 @@
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
+        <a href="#services" onclick="selectService('office')" style="color: #22c55e; font-weight: 700;">🏢 In-Person Office Consultation (₹1,100)</a>
+        <a href="#services" onclick="selectService('audio')" style="color: #f59e0b; font-weight: 700;">📞 Audio Consultation (₹1,100)</a>
         <a href="#services" onclick="selectService('fiveyear')" style="color: #f59e0b; font-weight: 700;">📅 5-Year Lal Kitab Report (₹799)</a>
+        <a href="#services" onclick="selectService('whatsapp')">📄 Personalised Kundli Summary (₹500)</a>
         <a href="#services" onclick="selectService('karza')" style="color: #ef4444; font-weight: 700;">🛡️ कर्ज़ मुक्ति रिपोर्ट (₹300)</a>
         <a href="https://astroparasluthra.in/nri.html">Worldwide / NRI Consultation ($35 USD)</a>
         <a href="#courses">Lal Kitab Master Training (₹7,500)</a>
-        <a href="#services">Premium Kundali Report (₹995)</a>
-        <a href="#services" onclick="selectService('whatsapp')">Personalised Kundli Summary (₹300)</a>
-        <a href="#reviews">Client Reviews</a>
       </div>
       <div class="footer-col">
         <h4>Contact & Support</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Office: Jalandhar, Punjab, India</p>
         <p><i class="fa-solid fa-phone"></i> <a href="tel:+917986665118" style="display:inline;">+91 79866 65118</a> / <a href="tel:+919888445118" style="display:inline;">+91 98884 45118</a></p>
         <p><i class="fa-solid fa-envelope"></i> <a href="mailto:destinyvaniya@gmail.com" style="display:inline;">destinyvaniya@gmail.com</a></p>
         <p><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/919888445118" target="_blank" style="display:inline;">WhatsApp: +91 98884 45118</a></p>
@@ -1836,10 +1943,11 @@
 
   <script>
     const razorpayLinks = {
+      office: "https://rzp.io/rzp/HS62mRz",
+      audio: "https://rzp.io/rzp/7XkPNvJ",
       fiveyear: "https://rzp.io/rzp/JFT0jIUi",
+      whatsapp: "https://rzp.io/rzp/esoVgaj",
       karza: "https://rzp.io/rzp/UzHQ51qn",
-      whatsapp: "https://rzp.io/rzp/0fZQZJv",
-      audio: "https://rzp.io/rzp/dqTpV3R",
       premium: "https://rzp.io/rzp/OWiOPGrV",
       gemstone: "https://rzp.io/rzp/3yXmKfA",
       course: "https://rzp.io/rzp/YmHWQT6Z",
@@ -1871,13 +1979,21 @@
       }
     }
 
-    function checkNriService() {
+    function checkServiceNotices() {
       const sVal = document.getElementById('service').value;
       const nriNotice = document.getElementById('nriNotice');
+      const officeNotice = document.getElementById('officeNotice');
+
       if (sVal === 'nri') {
         nriNotice.style.display = 'block';
       } else {
         nriNotice.style.display = 'none';
+      }
+
+      if (sVal === 'office') {
+        officeNotice.style.display = 'block';
+      } else {
+        officeNotice.style.display = 'none';
       }
     }
 
@@ -1885,7 +2001,7 @@
       const serviceSelect = document.getElementById('service');
       if (serviceSelect) {
         serviceSelect.value = serviceKey;
-        checkNriService();
+        checkServiceNotices();
       }
       document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
     }
@@ -1948,8 +2064,8 @@
       const notes = document.getElementById('notes').value.trim();
       const sVal = document.getElementById('service').value;
 
-      let msg = `*Namaste Paras Ji! I want to book a consultation / report.*\n\n`;
-      msg += `📌 *Selected:* ${serviceName}\n`;
+      let msg = `*Namaste Paras Ji! I want to book a consultation / appointment.*\n\n`;
+      msg += `📌 *Selected Service:* ${serviceName}\n`;
       msg += `👤 *Name:* ${name}\n`;
       msg += `📱 *Phone:* ${phone}\n`;
       msg += `⚧ *Gender:* ${gender}\n`;
@@ -1959,8 +2075,15 @@
       if (notes) {
         msg += `❓ *Questions/Notes:* ${notes}\n`;
       }
-      if (sVal === 'fiveyear') {
+
+      if (sVal === 'office') {
+        msg += `\n🏢 *Payment Link (Razorpay ₹1,100):* https://rzp.io/rzp/HS62mRz\nKripya available meeting date aur appointment slot confirm karein.`;
+      } else if (sVal === 'audio') {
+        msg += `\n💳 *Payment Link (Razorpay ₹1,100):* https://rzp.io/rzp/7XkPNvJ`;
+      } else if (sVal === 'fiveyear') {
         msg += `\n💳 *Payment Link (Razorpay ₹799):* https://rzp.io/rzp/JFT0jIUi`;
+      } else if (sVal === 'whatsapp') {
+        msg += `\n💳 *Payment Link (Razorpay ₹500):* https://rzp.io/rzp/esoVgaj`;
       } else if (sVal === 'karza') {
         msg += `\n💳 *Payment Link (Razorpay ₹300):* https://rzp.io/rzp/UzHQ51qn`;
       } else if (sVal === 'nri') {
